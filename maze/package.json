@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "maze",
   "version": "0.1.0",
   "private": true,
@@ -15,13 +16,18 @@
     "react-scripts": "5.0.1",
     "sass": "^1.69.5",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "env-cmd": "10.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "set:brand:dev:mazecar": "env-cmd -f env/mazecar/.env.development node ./src/scripts/index.cjs",
+    "set:brand:dev:mazemotorcycle": "env-cmd -f env/mazemotorcycle/.env.development node ./src/scripts/index.cjs",
+    "start-mazecar": "yarn set:brand:dev:mazecar && env-cmd -f env/mazecar/.env.development react-scripts start",
+    "start-mazemotorcycle": "yarn set:brand:dev:mazemotorcycle && env-cmd -f env/mazemotorcycle/.env.development react-scripts start"
   },
   "eslintConfig": {
     "extends": [
