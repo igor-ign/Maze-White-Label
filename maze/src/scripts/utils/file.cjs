@@ -5,7 +5,6 @@ function showFileNotFoundMessageAndExitProcess(file) {
     process.exit(1)
 }
 
-// @ts-ignore 
 function writeFile(file, string) {
     if (fs.existsSync(file)) {
         fs.writeFileSync(file, string)

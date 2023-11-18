@@ -1,11 +1,9 @@
 const path = require("path")
-// @ts-ignore
 const { writeFile } = require("./utils/file.cjs")
 
 const IMAGES_PATH = path.resolve(__dirname, '..', 'assets', 'images', 'index.js')
 const IMAGES_IMPORT = `export * from './${process.env.REACT_APP_BRAND_NAME}/index.js'`
 
-// @ts-ignore
 function setBrandImages() {
     writeFile(IMAGES_PATH, IMAGES_IMPORT)
 }
