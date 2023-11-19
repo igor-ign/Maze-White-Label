@@ -9,7 +9,7 @@ function changeStyleBrandFirstLine() {
     const filePerLine = stylesExportFileData.split(';')
 
     filePerLine[0] = STYLES_IMPORT
-    const newStylesImportContent = filePerLine.join(";")
+    const newStylesImportContent = filePerLine.join("")
     writeFile(STYLES_PATH, newStylesImportContent)
 }
 
