@@ -1,11 +1,5 @@
-import Logo from './logo.jpg'
-import Icon from './icon.png'
-
-const MAZECAR_IMAGES = {
-    LOGO: Logo,
-    ICON: Icon
-}
+import Logo from './logo.png'
 
 export const IMAGES = {
-    ...MAZECAR_IMAGES
+    LOGO: Logo,
 }
