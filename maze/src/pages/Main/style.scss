@@ -1,32 +1,4 @@
 @import '../../styles/index.scss';
 
 .main-page-container {
-    > .main-page-header {
-        align-items: center;
-        background-color: $primary;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 10px;
-
-        > .navigation-container {
-            max-width: 90%;
-            width: 500px;
-
-            > .navigation-links-list {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                list-style: none;
-                
-                > .navigation-item {
-                    color: $secondary;
-                    cursor: pointer;
-                    font-weight: 600;
-                    padding: 0 10px;
-
-                }
-            }
-        }
-    }
 }
