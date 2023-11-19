@@ -6,7 +6,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 auto;
+    max-width: 90%;
     padding: 10px;
+    width: 1280px;
 
     > .navigation-container {
         max-width: 90%;
