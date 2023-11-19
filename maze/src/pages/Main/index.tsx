@@ -3,7 +3,6 @@ import { BRAND_DISPLAY_NAME } from "../../constants";
 import './style.scss'
 
 export function MainPage() {
-
     return <main className="main-page-container">
         <header className="main-page-header">
             <img src={IMAGES.LOGO} alt={`${BRAND_DISPLAY_NAME} logo`} className="header-logo"/>
