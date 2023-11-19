@@ -1,0 +1,1 @@
+export type BrandTypes = "Maze Cars" | "Maze Motorcycle"
