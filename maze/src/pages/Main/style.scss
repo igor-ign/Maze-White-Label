@@ -2,4 +2,36 @@
 
 .main-page-container {
     background-color: $primary;
+
+    > .page-content {
+
+        > .page-banner {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            height: 500px;
+            justify-content: space-between;
+            padding: 10px;
+
+            @include tablet {
+                justify-content: center;
+            }
+
+            @include container-config;
+
+            > .banner-title-container {
+                color: $secondary;
+                width: 450px;
+
+                @include tablet {
+                    text-align: center;
+                }
+
+                > .banner-title {
+                    font-size: 32px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
 }
