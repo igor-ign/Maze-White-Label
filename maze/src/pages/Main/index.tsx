@@ -1,10 +1,12 @@
 import { IMAGES } from "../../assets/images";
 import { Header } from "../../components";
-import { BRAND_DISPLAY_NAME } from "../../constants";
+import { BRAND_DISPLAY_NAME, BRAND_NAME } from "../../constants";
+import { getAboutUsTextBasedOnCurrentBrandName } from "./utils";
 import './style.scss'
 
 export function MainPage() {
-    const bannerTitleParagraphAndImageAltKeyword = BRAND_DISPLAY_NAME === "Maze Cars" ? "car" : "motorcycle" 
+    const bannerTitleParagraphAndImageAltKeyword = BRAND_DISPLAY_NAME === "Maze Cars" ? "car" : "motorcycle"
+    const aboutUsParagraphs = getAboutUsTextBasedOnCurrentBrandName(BRAND_NAME)
 
     return <main className="main-page-container">
             <Header /> 
@@ -19,6 +21,15 @@ export function MainPage() {
                     </div>
 
                     <img src={IMAGES.BANNER_IMAGE} alt={`${BRAND_DISPLAY_NAME} banner. White ${bannerTitleParagraphAndImageAltKeyword} without background.`} className="banner-image" />
+                </section>
+                
+                <section className="about-us-container">
+                    <div className="about-us-content">
+                        <h1 className="about-us-title">About Us</h1>
+                        {aboutUsParagraphs?.map(paragraph => {
+                            return <p className="about-us-text">{paragraph}</p>
+                        })}
+                    </div>
                 </section>
             </article>
     </main>

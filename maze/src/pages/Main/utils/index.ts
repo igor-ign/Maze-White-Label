@@ -1,0 +1,1 @@
+export { getAboutUsTextBasedOnCurrentBrandName } from './about'
