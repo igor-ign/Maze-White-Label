@@ -1,6 +1,7 @@
 import { IMAGES } from "../../assets/images";
 import { Header } from "../../components";
 import { BRAND_DISPLAY_NAME, BRAND_NAME } from "../../constants";
+import { BrandCarousel } from "./components";
 import { getAboutUsTextBasedOnCurrentBrandName } from "./utils";
 import './style.scss'
 
@@ -25,10 +26,13 @@ export function MainPage() {
                 
                 <section className="about-us-container">
                     <div className="about-us-content">
-                        <h1 className="about-us-title">About Us</h1>
+                        <h2 className="about-us-title">About Us</h2>
                         {aboutUsParagraphs?.map(paragraph => {
                             return <p className="about-us-text">{paragraph}</p>
                         })}
+
+                        <h2 className="trusted-brands-title">Brands that we work with</h2>
+                        <BrandCarousel />
                     </div>
                 </section>
             </article>

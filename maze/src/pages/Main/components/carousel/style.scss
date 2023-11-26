@@ -1,0 +1,38 @@
+@import '../../../../styles/index.scss';
+
+.carousel-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    > .trusted-brands-list {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        max-width: 90%;
+        overflow-x: hidden;
+        padding: 10px;
+        scroll-behavior: smooth;
+        width: 1250px;
+
+        > .brands-list-item {
+            margin: 0 10px;
+        }
+    }
+
+    > .carousel-button {
+        align-items: center;
+        background-color: $secondary;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        padding: 8px;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $secondary-hover;
+        }
+    }
+}
