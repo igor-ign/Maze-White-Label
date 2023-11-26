@@ -9,6 +9,10 @@ export function MainPage() {
     const bannerTitleParagraphAndImageAltKeyword = BRAND_DISPLAY_NAME === "Maze Cars" ? "car" : "motorcycle"
     const aboutUsParagraphs = getAboutUsTextBasedOnCurrentBrandName(BRAND_NAME)
 
+    // TODO: Adjust carousel images
+    // TODO: Add key to each paragraph item, you'll need to refactor the paragraphs array
+    // TODO: Adjust page banner title size
+
     return <main className="main-page-container">
             <Header /> 
 
