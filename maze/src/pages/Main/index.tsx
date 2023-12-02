@@ -1,12 +1,12 @@
 import { IMAGES } from "../../assets/images";
 import { Header } from "../../components";
 import { BRAND_DISPLAY_NAME, BRAND_NAME } from "../../constants";
-import { BrandCarousel } from "./components";
+import { BrandCarousel, VehicleOverview } from "./components";
 import { getAboutUsTextBasedOnCurrentBrandName } from "./utils";
 import './style.scss'
 
 export function MainPage() {
-    const bannerTitleParagraphAndImageAltKeyword = BRAND_DISPLAY_NAME === "Maze Cars" ? "car" : "motorcycle"
+    const keywordBasedOnBrand = BRAND_DISPLAY_NAME === "Maze Cars" ? "car" : "motorcycle"
     const aboutUsParagraphs = getAboutUsTextBasedOnCurrentBrandName(BRAND_NAME)
 
     // TODO: Adjust carousel images
@@ -20,12 +20,12 @@ export function MainPage() {
                 <section className="page-banner">
                     <div className="banner-title-container">
                         <h1 className="banner-title">Search, find and buy
-                        the ideal {bannerTitleParagraphAndImageAltKeyword} easily.</h1>
+                        the ideal {keywordBasedOnBrand} easily.</h1>
                         <p className="banner-paragraph">The easiest and safest way of buying 
-                        your dream {bannerTitleParagraphAndImageAltKeyword}.</p>
+                        your dream {keywordBasedOnBrand}.</p>
                     </div>
 
-                    <img src={IMAGES.BANNER_IMAGE} alt={`${BRAND_DISPLAY_NAME} banner. White ${bannerTitleParagraphAndImageAltKeyword} without background.`} className="banner-image" />
+                    <img src={IMAGES.BANNER_IMAGE} alt={`${BRAND_DISPLAY_NAME} banner. White ${keywordBasedOnBrand} without background.`} className="banner-image" />
                 </section>
                 
                 <section className="about-us-container">
@@ -39,6 +39,8 @@ export function MainPage() {
                         <BrandCarousel />
                     </div>
                 </section>
+
+                <VehicleOverview brandKeyword={keywordBasedOnBrand}/>
             </article>
     </main>
 }

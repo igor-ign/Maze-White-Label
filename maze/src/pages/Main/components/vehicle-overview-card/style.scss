@@ -1,0 +1,45 @@
+@import '../../../../styles/index.scss';
+
+.vehicle-list-item {
+    background-color: $secondary;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding: 15px;
+    width: 200px;
+
+    > .item-brand, .item-name {
+        font-weight: 600;
+    }
+
+    > .item-brand {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    > .item-name {
+        font-size: 22px;
+    }
+
+    > .item-price {
+        margin: 10px 0;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    > .item-buy-button {
+        background-color: $primary;
+        border-radius: 3px;
+        border: none;
+        color: $secondary;
+        cursor: pointer;
+        font-weight: 600;
+        height: 30px;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            background-color: $primary-hover;
+        }
+    }
+}

@@ -15,6 +15,7 @@
     "@types/node": "^16.18.61",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
+    "axios": "^1.6.2",
     "env-cmd": "10.1.0",
     "json-server": "^0.17.4",
     "localforage": "^1.10.0",

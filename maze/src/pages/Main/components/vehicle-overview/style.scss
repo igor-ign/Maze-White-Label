@@ -1,0 +1,28 @@
+@import '../../../../styles/index.scss';
+
+.vehicle-overview-container {
+
+    > .vehicle-overview-content {
+        padding: 60px 0;
+
+        @include container-config;
+
+        > .overview-title {
+            color: $secondary;
+            font-size: 32px;
+        }
+
+        > .vehicle-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: space-between;
+            list-style: none;
+            margin-top: 40px;
+
+            > .loading-container {
+                margin: 0 auto;
+            }
+        }
+    }
+}
