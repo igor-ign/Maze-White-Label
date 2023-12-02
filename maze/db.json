@@ -1,76 +1,88 @@
 {
-    "cars": [
+    "car-overview": [
         {
             "id": 1,
             "brand": "Volkswagen",
+            "image": "",
             "model": "Golf",
             "price": 30000
         },
         {
             "id": 2,
             "brand": "Volkswagen",
+            "image": "",
             "model": "Jetta",
             "price": 45000
         },
         {
             "id": 3,
             "brand": "BMW",
+            "image": "",
             "model": "320i",
             "price": 55000
         },
         {
             "id": 4,
             "brand": "Ford",
+            "image": "",
             "model": "F150",
             "price": 40000
         },
         {
             "id": 5,
             "brand": "Jaguar",
+            "image": "",
             "model": "F-Type",
             "price": 70000
         },
         {
             "id": 6,
             "brand": "Mercedes-Benz",
+            "image": "",
             "model": "C180",
             "price": 70000
         }
     ],
-    "motorcycles": [
+    "motorcycle-overview": [
         {
             "id": 1,
             "brand": "Kawasaki",
+            "image": "",
             "model": "Ninja",
             "price": 10000
         },
         {
             "id": 2,
             "brand": "Ducatti",
+            "image": "",
             "model": "Panigale",
             "price": 30000
         },
         {
             "id": 3,
             "brand": "Honda",
+            "image": "",
             "model": "PCX",
             "price": 12000
         },
         {
             "id": 4,
             "brand": "BMW",
+            "image": "",
             "model": "G310",
             "price": 20000
         },
         {
             "id": 5,
             "brand": "BMW",
+            "image": "",
             "model": "S1000",
             "price": 30000
         },
         {
             "id": 6,
             "brand": "Suzuki",
+            "image": "",
             "model": "Hayabusa",
             "price": 14000
         }
