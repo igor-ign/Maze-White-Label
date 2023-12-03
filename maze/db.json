@@ -75,44 +75,72 @@
         {
             "id": 1,
             "brand": "Kawasaki",
-            "image": "",
+            "image": "https://i.imgur.com/HoR0bYW.png",
             "model": "Ninja",
             "price": 10000
         },
         {
             "id": 2,
             "brand": "Ducatti",
-            "image": "",
+            "image": "https://i.imgur.com/271iPpR.png",
             "model": "Panigale",
             "price": 30000
         },
         {
             "id": 3,
             "brand": "Honda",
-            "image": "",
+            "image": "https://i.imgur.com/8ZrXDfM.png",
             "model": "PCX",
             "price": 12000
         },
         {
             "id": 4,
             "brand": "BMW",
-            "image": "",
+            "image": "https://i.imgur.com/VcJOVeh.png",
             "model": "G310",
             "price": 20000
         },
         {
             "id": 5,
             "brand": "BMW",
-            "image": "",
+            "image": "https://i.imgur.com/OIMSum8.png",
             "model": "S1000",
             "price": 30000
         },
         {
             "id": 6,
             "brand": "Suzuki",
-            "image": "",
+            "image": "https://i.imgur.com/qKgi9IV.png",
             "model": "Hayabusa",
             "price": 14000
+        },
+        {
+            "id": 7,
+            "brand": "Yamaha",
+            "image": "https://i.imgur.com/ySqeIrA.png",
+            "model": "MT-10",
+            "price": 16000
+        },
+        {
+            "id": 8,
+            "brand": "Yamaha",
+            "image": "https://i.imgur.com/Ep1wj85.png",
+            "model": "YZF-R1M",
+            "price": 30000
+        },
+        {
+            "id": 9,
+            "brand": "Yamaha",
+            "image": "https://i.imgur.com/bRck1tT.png",
+            "model": "Tracer 9 GT",
+            "price": 14000
+        },
+        {
+            "id": 10,
+            "brand": "Kawasaki",
+            "image": "https://i.imgur.com/u2Ijqky.png",
+            "model": "Z400",
+            "price": 7000
         }
     ]
 }
