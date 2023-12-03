@@ -22,6 +22,10 @@
             list-style: none;
             margin-top: 40px;
 
+            @include tablet {
+                justify-content: center;
+            }
+
             > .loading-container {
                 margin: 0 auto;
             }
