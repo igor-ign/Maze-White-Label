@@ -3,44 +3,72 @@
         {
             "id": 1,
             "brand": "Volkswagen",
-            "image": "",
+            "image": "https://i.imgur.com/ZdtDPJL.png",
             "model": "Golf",
             "price": 30000
         },
         {
             "id": 2,
             "brand": "Volkswagen",
-            "image": "",
+            "image": "https://i.imgur.com/sTYadQ7.png",
             "model": "Jetta",
             "price": 45000
         },
         {
             "id": 3,
             "brand": "BMW",
-            "image": "",
+            "image": "https://i.imgur.com/yqEwU0N.png",
             "model": "320i",
             "price": 55000
         },
         {
             "id": 4,
             "brand": "Ford",
-            "image": "",
+            "image": "https://i.imgur.com/PLbuCoq.png",
             "model": "F150",
             "price": 40000
         },
         {
             "id": 5,
             "brand": "Jaguar",
-            "image": "",
+            "image": "https://i.imgur.com/uoq0vBU.png",
             "model": "F-Type",
             "price": 70000
         },
         {
             "id": 6,
             "brand": "Mercedes-Benz",
-            "image": "",
+            "image": "https://i.imgur.com/tkrw4Vq.png",
             "model": "C180",
             "price": 70000
+        },
+        {
+            "id": 7,
+            "brand": "Land Rover",
+            "image": "https://i.imgur.com/tpIC5eg.png",
+            "model": "Evoque",
+            "price": 50000
+        },
+        {
+            "id": 8,
+            "brand": "Nissan",
+            "image": "https://i.imgur.com/tc1Tjrh.png",
+            "model": "Versa",
+            "price": 30000
+        },
+        {
+            "id": 9,
+            "brand": "Volvo",
+            "image": "https://i.imgur.com/5vkZPtc.png",
+            "model": "XC60",
+            "price": 42000
+        },
+        {
+            "id": 10,
+            "brand": "Volvo",
+            "image": "https://i.imgur.com/rV3F2Qq.png",
+            "model": "XC90",
+            "price": 47000
         }
     ],
     "motorcycle-overview": [
