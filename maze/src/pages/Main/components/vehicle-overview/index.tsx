@@ -66,6 +66,8 @@ export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
                     return <VehicleOverviewCard id={id}  brand={brand} image={image} model={model} price={price} key={id}/>
                 })}
             </ul>
+
+            {!isOverviewLoading && <button className="more-button">More</button>}
         </div>
         </section>
 }
