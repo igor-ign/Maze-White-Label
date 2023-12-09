@@ -142,5 +142,137 @@
             "model": "Z400",
             "price": 7000
         }
+    ],
+    "cars": [
+        {
+            "id": 1,
+            "brand": "Volkswagen",
+            "model": "Golf",
+            "description": "1.6 TSI Comfortline",
+            "images": ["https://i.imgur.com/2BLKK4K.jpg", "https://i.imgur.com/ZgxLOrx.jpg", "https://i.imgur.com/RYbDYTk.jpg", "https://i.imgur.com/PVVHeoN.jpg"],
+            "km": 100000,
+            "price": 30000,
+            "year": 2020,
+            "tranmission": "AUTOMATIC",
+            "color": "White",
+            "fuel": "Gasoline"
+        },
+        {
+            "id": 2,
+            "brand": "Volkswagen",
+            "model": "Jetta",
+            "description": "2.0 350 TSI",
+            "images": ["https://i.imgur.com/pzJtvrf.jpg", "https://i.imgur.com/IlsP8rt.jpg", "https://i.imgur.com/rD8BDFp.jpg", "https://i.imgur.com/Iz4LVGW.jpg"],
+            "km": "10000",
+            "price": 45000,
+            "year": 2017,
+            "tranmission": "AUTOMATIC",
+            "color": "Blue",
+            "fuel": "Gasoline"
+        },
+        {
+            "id": 3,
+            "brand": "BMW",
+            "model": "320i",
+            "description": "2.0 16V TURBO",
+            "images": ["https://i.imgur.com/u9oZEih.jpg", "https://i.imgur.com/V3zXNVR.jpg", "https://i.imgur.com/baguZPq.jpg"],
+            "km": 30000,
+            "price": 55000,
+            "year": 2022,
+            "tranmission": "MANUAL",
+            "color": "Black",
+            "fuel": "Gasoline"
+        },
+        {
+            "id": 4,
+            "brand": "Ford",
+            "model": "F150",
+            "description": "5.0 V6",
+            "images": ["https://i.imgur.com/smzHe2u.jpg", "https://i.imgur.com/N7Yiw1a.jpg", "https://i.imgur.com/xwUmSnZ.jpg", "https://i.imgur.com/Uz5R4F8.jpg"],
+            "km": 50000,
+            "price": 40000,
+            "year": 2023,
+            "tranmission": "AUTOMATIC",
+            "color": "White",
+            "fuel": "Diesel"
+        },
+        {
+            "id": 5,
+            "brand": "Jaguar",
+            "model": "F-Type",
+            "description": "2.0 P300 CABRIO",
+            "images": ["https://i.imgur.com/VBtI4lw.jpg", "https://i.imgur.com/j47csOq.jpg", "https://i.imgur.com/Ap04kLj.jpg", "https://i.imgur.com/BPRgqa6.jpg"],
+            "km": 10000,
+            "price": 70000,
+            "year": 2023,
+            "tranmission": "AUTOMATIC",
+            "color": "Red",
+            "fuel": "Gasoline"
+        },
+        {
+            "id": 6,
+            "brand": "Mercedes-Benz",
+            "model": "C180",
+            "description": "1.6 CGI 9G-TRONIC",
+            "images": ["https://i.imgur.com/FCsZC16.jpg", "https://i.imgur.com/vmfN1KB.jpg", "https://i.imgur.com/7NLsBEI.png"],
+            "km": 10000,
+            "price": 70000,
+            "year": 2018,
+            "tranmission": "AUTOMATIC",
+            "color": "Grey",
+            "fuel": "Gasoline"
+        },
+        {
+            "id": 7,
+            "brand": "Land Rover",
+            "model": "Evoque",
+            "description": "2.0 16V SI4 SE DYNAMIC 4WD",
+            "images": ["https://i.imgur.com/5uVdS6t.jpg", "https://i.imgur.com/RSzDkk8.jpg", "https://i.imgur.com/dNpwld5.jpg", "https://i.imgur.com/aCw9l49.jpg", "https://i.imgur.com/TBvU3yN.jpg"],
+            "km": 5000,
+            "price": 50000,
+            "year": 2016,
+            "tranmission": "AUTOMATIC",
+            "color": "Red",
+            "fuel": "Gasoline"
+        },
+        {
+            "id": 8,
+            "brand": "Nissan",
+            "model": "Versa",
+            "description": "1.6 16V FLEXSTART SV 4P XTRONIC",
+            "images": ["https://i.imgur.com/emXCkop.jpg", "https://i.imgur.com/n45G66i.jpg", "https://i.imgur.com/boGQnZo.jpg", "https://i.imgur.com/0ik6yyO.jpg"],
+            "km": 70000,
+            "price": 30000,
+            "year": 2020,
+            "tranmission": "AUTOMATIC",
+            "color": "Silver",
+            "fuel": "Gasoline"
+        },
+        {
+            "id": 9,
+            "brand": "Volvo",
+            "model": "XC60",
+            "description": "2.0 T8 HYBRID R-DESIGN AWD GEARTRONIC",
+            "images": ["https://i.imgur.com/1SjmYMz.jpg", "https://i.imgur.com/jFMLQq1.jpg", "https://i.imgur.com/0SB4anV.jpg", "https://i.imgur.com/QjHdbbr.jpg"],
+            "km": 10000,
+            "price": 42000,
+            "year": 2020,
+            "tranmission": "AUTOMATIC",
+            "color": "Silver",
+            "fuel": "Gasoline"
+        },
+        {
+            "id": 10,
+            "brand": "Volvo",
+            "model": "XC90",
+            "description": "2.0 D5 DIESEL MOMENTUM AWD GEARTRONIC",
+            "images": ["https://i.imgur.com/MxzEfRI.jpg", "https://i.imgur.com/uQZsQ0c.jpg", "https://i.imgur.com/xy2uneo.jpg", "https://i.imgur.com/K0DcRqN.jpg"],
+            "km": 20000,
+            "price": 47000,
+            "year": 2021,
+            "tranmission": "AUTOMATIC",
+            "color": "Black",
+            "fuel": "Diesel"
+        }
     ]
 }
