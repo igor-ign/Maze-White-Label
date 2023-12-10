@@ -1,5 +1,5 @@
 import axios from "axios"
-import { VehicleListResponse } from "../interfaces"
+import { CarDetailsResponse, MotorcycleDetailsResponse, VehicleListResponse } from "../interfaces"
 
 export function useRequest() {
     const baseUrl = 'http://localhost:3000'
@@ -12,8 +12,18 @@ export function useRequest() {
         return await axios.get<VehicleListResponse[]>(`${baseUrl}/motorcycle-overview`)
     }
 
-    return [
+    async function getCarDetails(id: number) {
+        return await axios.get<CarDetailsResponse>(`${baseUrl}/cars/${id}`)
+    }
+
+    async function getMotorcycleDetails(id: number) {
+        return await axios.get<MotorcycleDetailsResponse>(`${baseUrl}/motorcycles/${id}`)
+    }
+
+    return {
         getCarOverview,
-        getMotorcycleOverview
-    ]
+        getMotorcycleOverview,
+        getCarDetails,
+        getMotorcycleDetails
+    }
 }

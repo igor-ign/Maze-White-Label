@@ -1,0 +1,110 @@
+@import '../../styles/index.scss';
+
+.details-page-container {
+    background-color: $primary;
+
+    > .vehicle-details-container {
+        align-items: center;
+        background-color: $secondary;
+        display: flex;
+        flex-wrap: wrap;
+        height: 85vh;
+        justify-content: space-evenly;
+        padding: 50px 0;
+
+        > .vehicle-image-container {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+
+            @include tablet {
+                justify-content: center;
+                position: relative;
+                margin-bottom: 50px;
+            }
+
+            > .vehicle-image {
+                width: 90%;
+            }
+
+            > .image-button {
+                background-color: $primary;
+                border-radius: 5px;
+                border: none;
+                color: $secondary;
+                cursor: pointer;
+                padding: 8px;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: $primary-hover;
+                }
+
+                &:disabled {
+                    background-color: $primary-disabled;
+                    cursor: not-allowed;
+                }
+
+                &.next {
+                    @include tablet {
+                        left: -65px;
+                        position: relative;
+                        top: 80px;
+                    }
+                }
+
+                &.previous {
+                    @include tablet {
+                        position: relative;
+                        right: -65px;
+                        top: 80px;
+                    }
+                }
+            }
+
+            > .vehicle-image {
+                margin: 0 20px;
+            }
+        }
+
+        > .vehicle-info-container {
+            background-color: $primary;
+            border-radius: 5px;
+            color: $secondary;
+            display: flex;
+            flex-direction: column;
+            max-width: 90%;
+            padding: 18px;
+            width: 400px;
+
+            > .information-box-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 28px;
+                justify-content: space-between;
+                margin: 30px 0;
+            }
+
+            > .vehicle-price {
+                font-size: 32px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            > .buy-button {
+                border-radius: 3px;
+                border: none;
+                color: $primary;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 600;
+                height: 40px;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: $secondary-hover;
+                }
+            }
+        }
+    }
+}

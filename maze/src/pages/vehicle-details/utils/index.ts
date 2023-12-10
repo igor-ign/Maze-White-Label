@@ -1,0 +1,1 @@
+export { getTransmissionTranslated } from './car'
