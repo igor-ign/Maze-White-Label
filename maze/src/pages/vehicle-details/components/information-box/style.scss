@@ -1,0 +1,15 @@
+.information-box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    > .box-title {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    > .box-content {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}

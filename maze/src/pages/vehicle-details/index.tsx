@@ -6,11 +6,13 @@ import { Header } from '../../components'
 import { BRAND_NAME } from '../../constants';
 import { useRequest } from '../../hooks';
 import { CarDetailsResponse, MotorcycleDetailsResponse } from '../../interfaces';
+import { CarInfo, ImageLoading, MotorcycleInfo } from './components';
 import './style.scss'
 
 export function VehicleDetailsPage() {
     const [vehicle, setVehicle] = useState<CarDetailsResponse | MotorcycleDetailsResponse>();
     const [currentImage, setCurrentImage] = useState<number>(0);
+    const [isDetailsLoading, setIsDetailsLoading] = useState<boolean>(false);
 
     const { getCarDetails, getMotorcycleDetails } = useRequest();
     const { id } = useParams()
@@ -20,6 +22,7 @@ export function VehicleDetailsPage() {
 
     useEffect(() => {
         async function getVehicleDetails() {
+            setIsDetailsLoading(true)
             if (BRAND_NAME === 'mazecar') {
                 const { data } = await getCarDetails(Number(id))
                 setVehicle(data)
@@ -27,17 +30,18 @@ export function VehicleDetailsPage() {
                 const { data } = await getMotorcycleDetails(Number(id))
                 setVehicle(data)
             }
+            setIsDetailsLoading(false)
         }
 
         getVehicleDetails()
     }, [])
 
-    function handleClickPreviousImage() {
-        setCurrentImage((prevImageIndex) => prevImageIndex - 1)
-    }
+    function renderImageInfo() {
+        if (!isDetailsLoading) {
+            return (<img src={vehicle?.images[currentImage]} alt={`${vehicle?.brand} ${vehicle?.model}`} className='vehicle-image'/>)
+        }
 
-    function handleClickNextImage() {
-        setCurrentImage((prevImageIndex) => prevImageIndex + 1)
+        return <ImageLoading />
     }
 
     return <main className="details-page-container">
@@ -45,16 +49,29 @@ export function VehicleDetailsPage() {
         
         <div className="vehicle-details-container">
             <div className="vehicle-image-container">
-                <button className="image-button" onClick={handleClickPreviousImage} disabled={isPreviousImageButtonDisabled}>
+                <button className="image-button" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex - 1)} disabled={isPreviousImageButtonDisabled}>
                     <ArrowBack />
                 </button>
-                <img src={vehicle?.images[currentImage]} alt={`${vehicle?.brand} ${vehicle?.model}`} className='vehicle-image'/>
-                <button className="image-button" onClick={handleClickNextImage} disabled={isNextImageButtonDisabled}>
+
+                {renderImageInfo()}
+
+                <button className="image-button" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex + 1)} disabled={isNextImageButtonDisabled}>
                     <ArrowForward />
                 </button>
             </div>
             
-            <div className="vehicle-info-container"></div>
+            <div className="vehicle-info-container">
+                <h1 className="vehicle-name">
+                    {vehicle?.brand} {vehicle?.model}
+                </h1>
+
+                <ul className="information-box-list">
+                    {BRAND_NAME === 'mazecar' ? <CarInfo car={vehicle as CarDetailsResponse}/> : <MotorcycleInfo motorcycle={vehicle as MotorcycleDetailsResponse}/>}
+                </ul>
+
+                <span className="vehicle-price">${vehicle?.price}</span>
+                <button className="buy-button">Buy Now</button>
+            </div>
         </div>
     </main>
 }

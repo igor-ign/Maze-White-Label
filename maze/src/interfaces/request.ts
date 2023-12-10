@@ -14,7 +14,6 @@ export interface CarDetailsResponse {
     id: number;
     brand: string;
     model: string;
-    description: string;
     images: string[];
     km: number;
     price: number;

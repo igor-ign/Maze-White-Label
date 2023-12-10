@@ -7,13 +7,15 @@
         align-items: center;
         background-color: $secondary;
         display: flex;
+        flex-wrap: wrap;
         height: 85vh;
-        justify-content: center;
+        justify-content: space-evenly;
 
         > .vehicle-image-container {
             align-items: center;
             display: flex;
             justify-content: space-between;
+            max-width: 90%;
 
             > .image-button {
                 background-color: $primary;
@@ -30,11 +32,52 @@
 
                 &:disabled {
                     background-color: $primary-disabled;
+                    cursor: not-allowed;
                 }
             }
 
             > .vehicle-image {
                 margin: 0 20px;
+            }
+        }
+
+        > .vehicle-info-container {
+            background-color: $primary;
+            border-radius: 5px;
+            color: $secondary;
+            display: flex;
+            flex-direction: column;
+            max-width: 90%;
+            padding: 18px;
+            width: 400px;
+
+            > .information-box-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 28px;
+                justify-content: space-between;
+                margin: 30px 0;
+            }
+
+            > .vehicle-price {
+                font-size: 32px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            > .buy-button {
+                border-radius: 3px;
+                border: none;
+                color: $primary;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 600;
+                height: 40px;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: $secondary-hover;
+                }
             }
         }
     }
