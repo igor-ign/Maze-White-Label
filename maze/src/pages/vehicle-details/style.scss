@@ -10,12 +10,22 @@
         flex-wrap: wrap;
         height: 85vh;
         justify-content: space-evenly;
+        padding: 50px 0;
 
         > .vehicle-image-container {
             align-items: center;
             display: flex;
             justify-content: space-between;
-            max-width: 90%;
+
+            @include tablet {
+                justify-content: center;
+                position: relative;
+                margin-bottom: 50px;
+            }
+
+            > .vehicle-image {
+                width: 90%;
+            }
 
             > .image-button {
                 background-color: $primary;
@@ -33,6 +43,22 @@
                 &:disabled {
                     background-color: $primary-disabled;
                     cursor: not-allowed;
+                }
+
+                &.next {
+                    @include tablet {
+                        left: -65px;
+                        position: relative;
+                        top: 80px;
+                    }
+                }
+
+                &.previous {
+                    @include tablet {
+                        position: relative;
+                        right: -65px;
+                        top: 80px;
+                    }
                 }
             }
 

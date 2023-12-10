@@ -6,7 +6,7 @@ import { Header } from '../../components'
 import { BRAND_NAME } from '../../constants';
 import { useRequest } from '../../hooks';
 import { CarDetailsResponse, MotorcycleDetailsResponse } from '../../interfaces';
-import { CarInfo, ImageLoading, MotorcycleInfo } from './components';
+import { CarInfo, DetailsLoading, MotorcycleInfo } from './components';
 import './style.scss'
 
 export function VehicleDetailsPage() {
@@ -41,7 +41,7 @@ export function VehicleDetailsPage() {
             return (<img src={vehicle?.images[currentImage]} alt={`${vehicle?.brand} ${vehicle?.model}`} className='vehicle-image'/>)
         }
 
-        return <ImageLoading />
+        return <DetailsLoading />
     }
 
     return <main className="details-page-container">
@@ -49,17 +49,20 @@ export function VehicleDetailsPage() {
         
         <div className="vehicle-details-container">
             <div className="vehicle-image-container">
-                <button className="image-button" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex - 1)} disabled={isPreviousImageButtonDisabled}>
+                <button className="image-button previous" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex - 1)} disabled={isPreviousImageButtonDisabled}>
                     <ArrowBack />
                 </button>
 
                 {renderImageInfo()}
 
-                <button className="image-button" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex + 1)} disabled={isNextImageButtonDisabled}>
+                <button className="image-button next" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex + 1)} disabled={isNextImageButtonDisabled}>
                     <ArrowForward />
                 </button>
             </div>
-            
+
+            {isDetailsLoading && <DetailsLoading />}
+            {
+            !isDetailsLoading &&             
             <div className="vehicle-info-container">
                 <h1 className="vehicle-name">
                     {vehicle?.brand} {vehicle?.model}
@@ -72,6 +75,7 @@ export function VehicleDetailsPage() {
                 <span className="vehicle-price">${vehicle?.price}</span>
                 <button className="buy-button">Buy Now</button>
             </div>
+            }
         </div>
     </main>
 }
