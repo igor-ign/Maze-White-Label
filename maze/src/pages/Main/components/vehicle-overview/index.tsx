@@ -11,7 +11,7 @@ export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
     const [ vehicleList, setVehicleList] = useState<VehicleListResponse[]>([])
     const [ isOverviewLoading, setIsOverviewLoading] = useState<boolean>(true);
 
-    const [ getCarOverview, getMotorcycleOverview ] = useRequest()
+    const { getCarOverview, getMotorcycleOverview } = useRequest()
     const carOverviewListRef = useRef(null)
 
     useEffect(() => {

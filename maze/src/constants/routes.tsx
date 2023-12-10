@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { CarDetailsPage, MainPage } from '../pages'
+import { MainPage, VehicleDetailsPage } from '../pages'
 
 export const APP_ROUTES = createBrowserRouter([
     {
@@ -8,6 +8,6 @@ export const APP_ROUTES = createBrowserRouter([
     },
     {
         path: "/vehicle/:id",
-        element: <CarDetailsPage />
+        element: <VehicleDetailsPage />
     }
   ]);

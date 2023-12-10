@@ -1,0 +1,41 @@
+@import '../../styles/index.scss';
+
+.details-page-container {
+    background-color: $primary;
+
+    > .vehicle-details-container {
+        align-items: center;
+        background-color: $secondary;
+        display: flex;
+        height: 85vh;
+        justify-content: center;
+
+        > .vehicle-image-container {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+
+            > .image-button {
+                background-color: $primary;
+                border-radius: 5px;
+                border: none;
+                color: $secondary;
+                cursor: pointer;
+                padding: 8px;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: $primary-hover;
+                }
+
+                &:disabled {
+                    background-color: $primary-disabled;
+                }
+            }
+
+            > .vehicle-image {
+                margin: 0 20px;
+            }
+        }
+    }
+}
