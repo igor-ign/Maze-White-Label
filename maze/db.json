@@ -274,5 +274,107 @@
             "color": "Black",
             "fuel": "Diesel"
         }
+    ],
+    "motorcycles": [
+        {
+            "id": 1,
+            "brand": "Kawasaki",
+            "model": "Ninja",
+            "images": ["https://i.imgur.com/iUECAdf.jpg", "https://i.imgur.com/uS9Viq7.jpg"],
+            "km": 10000,
+            "price": 10000,
+            "year": 2020,
+            "color": "Green"
+        },
+        {
+            "id": 2,
+            "brand": "Ducatti",
+            "model": "Panigale",
+            "images": ["https://i.imgur.com/zxgFSES.jpg"],
+            "km": 5000,
+            "price": 30000,
+            "year": 2022,
+            "color": "Red"
+        },
+        {
+            "id": 3,
+            "brand": "Honda",
+            "model": "PCX",
+            "images": ["https://i.imgur.com/lHkvNA8.jpg", "https://i.imgur.com/tQD330i.jpg"],
+            "km": 20000,
+            "price": 12000,
+            "year": 2017,
+            "color": "White"
+        },
+        {
+            "id": 4,
+            "brand": "BMW",
+            "model": "G310",
+            "images": ["https://i.imgur.com/8TlSwpR.jpg", "https://i.imgur.com/egMSD61.jpg"],
+            "km": 5000,
+            "price": 20000,
+            "year": 2023,
+            "color": "White"
+        },
+        {
+            "id": 5,
+            "brand": "BMW",
+            "model": "S1000",
+            "images": ["https://i.imgur.com/Qqurc1F.jpg", "https://i.imgur.com/gs0LNVK.jpg"],
+            "km": 0,
+            "price": 30000,
+            "year": 2023,
+            "color": "White"
+        },
+        {
+            "id": 6,
+            "brand": "Suzuki",
+            "model": "Hayabusa",
+            "images": ["https://i.imgur.com/5WkRqO1.jpg", "https://i.imgur.com/AzYd0Iw.jpg"],
+            "km": 12000,
+            "price": 14000,
+            "year": 2023,
+            "color": "Black"
+        },
+        {
+            "id": 7,
+            "brand": "Yamaha",
+            "model": "MT-10",
+            "images": ["https://i.imgur.com/UpFLKro.jpg", "https://i.imgur.com/nbq6lMD.jpg"],
+            "km": 7000,
+            "price": 16000,
+            "year": 2018,
+            "color": "Black"
+        },
+        {
+            "id": 8,
+            "brand": "Yamaha",
+            "model": "YZF-R1M",
+            "images": ["https://i.imgur.com/PqGxe7a.jpg", "https://i.imgur.com/b2ZgrnL.jpg"],
+            "km": 0,
+            "price": 30000,
+            "year": 2023,
+            "color": "Black"
+        },
+        {
+            "id": 9,
+            "brand": "Yamaha",
+            "model": "Tracer 9 GT",
+            "images": ["https://i.imgur.com/YVaih66.jpg", "https://i.imgur.com/XXfV9N7.jpg"],
+            "km": 20000,
+            "price": 14000,
+            "year": 2020,
+            "color": "Red"
+        },
+        {
+            "id": 10,
+            "brand": "Kawasaki",
+            "model": "Z400",
+            "images": ["https://i.imgur.com/W0qFMMX.jpg", "https://i.imgur.com/8THJeB0.jpg"],
+            "km": 40000,
+            "price": 7000,
+            "year": 2023,
+            "color": "Green"
+        }
     ]
 }
