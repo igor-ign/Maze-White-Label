@@ -1,1 +1,2 @@
-export type BrandTypes = "Maze Cars" | "Maze Motorcycle"
+export type BrandNameTypes = "Maze Cars" | "Maze Motorcycle"
+export type BrandKeywordTypes = 'mazecar' | 'mazemotorcycle'

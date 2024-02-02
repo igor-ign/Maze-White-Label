@@ -1,4 +1,4 @@
-import { BrandTypes } from "../interfaces"
+import { BrandKeywordTypes, BrandNameTypes } from "../interfaces"
 
-export const BRAND_NAME: string = process.env.REACT_APP_BRAND_NAME as string
-export const BRAND_DISPLAY_NAME: BrandTypes = process.env.REACT_APP_BRAND_DISPLAY_NAME as BrandTypes
+export const BRAND_NAME: BrandKeywordTypes = process.env.REACT_APP_BRAND_NAME as BrandKeywordTypes
+export const BRAND_DISPLAY_NAME: BrandNameTypes = process.env.REACT_APP_BRAND_DISPLAY_NAME as BrandNameTypes

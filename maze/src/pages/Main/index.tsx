@@ -6,11 +6,8 @@ import { getAboutUsParagraphsBasedOnCurrentBrandName } from "./utils";
 import './style.scss'
 
 export function MainPage() {
-    const keywordBasedOnBrand = BRAND_DISPLAY_NAME === "Maze Cars" ? "car" : "motorcycle"
+    const keywordBasedOnBrand = BRAND_NAME === "mazecar" ? "car" : "motorcycle"
     const aboutUsParagraphs = getAboutUsParagraphsBasedOnCurrentBrandName(BRAND_NAME)
-
-    // TODO: Adjust carousel images
-    // TODO: Adjust page banner title size
 
     return <main className="main-page-container">
             <Header /> 
