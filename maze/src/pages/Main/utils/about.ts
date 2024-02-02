@@ -1,4 +1,6 @@
-export function getAboutUsParagraphsBasedOnCurrentBrandName(brandName: string) {
+import { BrandKeywordTypes } from "../../../interfaces";
+
+export function getAboutUsParagraphsBasedOnCurrentBrandName(brandName: BrandKeywordTypes) {
     return {
         mazecar: [
             {
