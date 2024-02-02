@@ -10,7 +10,7 @@
 
     @include container-config;
 
-    @include tablet {
+    @include mobile {
         justify-content: center;
     }
 

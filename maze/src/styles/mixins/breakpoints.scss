@@ -1,23 +1,46 @@
 @mixin mobile {
-    @media (max-width: 500px) {
-        @content;
+    @media (max-width: 480px) {
+      @content;
     }
-}
+  }
+  
+  @mixin tablet {
+    @media (max-width: 1100px) and (min-width: 480px) {
+      @content;
+    }
+  }
+  
+  @mixin notebook {
+    @media (max-width: 1400px) and (min-width: 1100px) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
 
-@mixin tablet {
-    @media (max-width: 991px) {
-        @content;
-    }
-}
 
-@mixin notebook {
-    @media (max-width: 1199px) {
-        @content;
+  @mixin applyStyleForMultipleDevices($keys...) {
+    @each $key in $keys {
+      @if $key == mobile {
+        @include mobile {
+          @content;
+        }
+      } @else if $key == tablet {
+        @include tablet {
+          @content;
+        }
+      } @else if $key == notebook {
+        @include notebook {
+          @content;
+        }
+      } @else {
+        @include desktop {
+          @content;
+        }
+      }
     }
-}
-
-@mixin desktop {
-    @media (min-width: 1200px) {
-        @content;
-    }
-}
+  }

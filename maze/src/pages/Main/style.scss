@@ -12,19 +12,15 @@
             height: 500px;
             justify-content: space-between;
 
-            @include tablet {
-                justify-content: center;
-            }
-
             @include container-config;
+
+            @include applyStyleForMultipleDevices(mobile, tablet) {
+                justify-content: space-around;
+            }
 
             > .banner-title-container {
                 color: $secondary;
                 width: 450px;
-
-                @include tablet {
-                    text-align: center;
-                }
 
                 > .banner-title {
                     font-size: 32px;
