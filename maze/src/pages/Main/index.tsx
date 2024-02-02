@@ -6,7 +6,7 @@ import { getAboutUsParagraphsBasedOnCurrentBrandName } from "./utils";
 import './style.scss'
 
 export function MainPage() {
-    const keywordBasedOnBrand = BRAND_DISPLAY_NAME === "Maze Cars" ? "car" : "motorcycle"
+    const keywordBasedOnBrand = BRAND_NAME === "mazecar" ? "car" : "motorcycle"
     const aboutUsParagraphs = getAboutUsParagraphsBasedOnCurrentBrandName(BRAND_NAME)
 
     return <main className="main-page-container">

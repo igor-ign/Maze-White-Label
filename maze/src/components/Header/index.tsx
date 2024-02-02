@@ -1,6 +1,6 @@
 import { useNavigate} from "react-router-dom";
 import { IMAGES } from "../../assets/images";
-import { BRAND_DISPLAY_NAME } from "../../constants";
+import { BRAND_DISPLAY_NAME, BRAND_NAME } from "../../constants";
 import './style.scss'
 
 
@@ -14,7 +14,7 @@ export function Header() {
             <nav className="navigation-container">
                 <ul className="navigation-links-list">
                     <li className="navigation-item" onClick={(() => navigate('/'))}>Home</li>
-                    <li className="navigation-item">{BRAND_DISPLAY_NAME === "Maze Cars" ? "Cars" : "Motorcycles"}</li>
+                    <li className="navigation-item">{BRAND_NAME === "mazecar" ? "Cars" : "Motorcycles"}</li>
                     <li className="navigation-item">Search</li>
                     <li className="navigation-item">About</li>
                 </ul>
