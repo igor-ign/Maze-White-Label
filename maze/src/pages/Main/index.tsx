@@ -2,15 +2,14 @@ import { IMAGES } from "../../assets/images";
 import { Header } from "../../components";
 import { BRAND_DISPLAY_NAME, BRAND_NAME } from "../../constants";
 import { BrandCarousel, VehicleOverview } from "./components";
-import { getAboutUsTextBasedOnCurrentBrandName } from "./utils";
+import { getAboutUsParagraphsBasedOnCurrentBrandName } from "./utils";
 import './style.scss'
 
 export function MainPage() {
     const keywordBasedOnBrand = BRAND_DISPLAY_NAME === "Maze Cars" ? "car" : "motorcycle"
-    const aboutUsParagraphs = getAboutUsTextBasedOnCurrentBrandName(BRAND_NAME)
+    const aboutUsParagraphs = getAboutUsParagraphsBasedOnCurrentBrandName(BRAND_NAME)
 
     // TODO: Adjust carousel images
-    // TODO: Add key to each paragraph item, you'll need to refactor the paragraphs array
     // TODO: Adjust page banner title size
 
     return <main className="main-page-container">
@@ -31,8 +30,8 @@ export function MainPage() {
                 <section className="about-us-container">
                     <div className="about-us-content">
                         <h2 className="about-us-title">About Us</h2>
-                        {aboutUsParagraphs?.map(paragraph => {
-                            return <p className="about-us-text">{paragraph}</p>
+                        {aboutUsParagraphs?.map(({ key, paragraph }) => {
+                            return <p className="about-us-text" key={key}>{paragraph}</p>
                         })}
 
                         <h2 className="trusted-brands-title">Brands that we work with</h2>

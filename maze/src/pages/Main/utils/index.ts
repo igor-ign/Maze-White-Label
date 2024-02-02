@@ -1,1 +1,1 @@
-export { getAboutUsTextBasedOnCurrentBrandName } from './about'
+export { getAboutUsParagraphsBasedOnCurrentBrandName } from './about'
