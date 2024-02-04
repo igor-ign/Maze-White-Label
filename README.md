@@ -21,42 +21,55 @@ The idea behind this white-label application is to solve the problem of a compan
 
 ## How to Run Maze
 
-Don't let the white-label thing scare you, running maze is as simple as running a regular application, in this section I'll guide you through this process.  
+Don't let the white-label thing scare you, running maze is as simple as running a regular application, in this section I'll guide you through this process.
 
 **Project Dependencies:**
+
 - ReactJS
 - Typescript
 - SASS
-- NodeJS **(use V16.16.0 or higher)**  
+- NodeJS **(use V16.16.0 or higher)**
 
 **Project Libraries:**
+
 - React Router
 - Axios
 - Material UI
-- Json Server    
+- Json Server
 
-Before starting the installation process make sure that your NodeJS version is 16.16.0 or higher. If you don't know how to manage the node versions I strongly recommend you to download [NVM (Node Version Manager)](https://github.com/coreybutler/nvm-windows). If you don't know which NodeJS version you are using right now you should write ```node -v``` in the command prompt.  
+Before starting the installation process make sure that your NodeJS version is 16.16.0 or higher. If you don't know how to manage the node versions I strongly recommend you to download [NVM (Node Version Manager)](https://github.com/coreybutler/nvm-windows). If you don't know which NodeJS version you are using right now you should write `node -v` in the command prompt.
 
 First things first, you need to clone the project. (I'm considering you use VSCode as your code editor)
+
 1. At the top of the page you should click the green "<> code" button.
 2. Select "https" and click in the button located to the right of the link in order to copy the project's url.
 
-![Image describing the project clone process]()
+![Image describing the project clone process](readme-images/clone.jpg)
 
 3. Open VSCode, select "terminal" and then "new terminal".
 
-![Image describing how to open a terminal in VSCode]()
+![Image describing how to open a terminal in VSCode](readme-images/vscode-terminal.jpg)
 
-4. When the terminal is opened, you should type the following and press enter in order to download all the project dependencies and libraries: ```yarn install```  or the short one ```yarn```. This process of downloading all the dependencies will not take long depending on your computer.
+4. When the terminal is opened, you should type the following and press enter in order to download all the project dependencies and libraries: `yarn install` or the short one `yarn`. This process of downloading all the dependencies will not take long depending on your computer.
 5. Now you'll need two terminals: one to run the project and other one to run the json server so the website lists can be fullfiled with data from a "fake api".
-6. Starting with the json server, you'll need to type in one of the terminals you have opened: ```npx json-server --watch db.json --d 3000```.
-  
+6. Starting with the json server, you'll need to type in one of the terminals you have opened: `npx json-server --watch db.json --d 3000`.
+
 You use "--watch {file}" to specify the file where json server should get the "api" data and "--d {milliseconds}" to specify how long the json server should take (a.k.a the delay) to give you the response data. I recommend you to use this delay so the website look like a real world application where the API often take some seconds to answer your request.
-  
+
 7. In the second terminal, which is not beeing used yet, you can type two different commands to start the application:
-  
-```yarn start-mazecar```
+
+`yarn start-mazecar`
 or
-```yarn start-mazemotorcycle```
-  
+`yarn start-mazemotorcycle`
+
 The first command line will start the car selling brand "Maze Car" website, the second one will start the motorcycle selling brand "Maze Motorcycle" website. You will understand better how json server and the white label scripts work in the next sections of this readme.
+
+**Important:** you can't run `yarn start-mazecar` and `yarn start-mazemotorcycle` at the same time, if you are running one of them and want to run the other you need to stop the current and start the one you want to execute.
+
+If you execute `yarn start-mazecar` you will see this initial page:
+
+![Maze Car initial page](readme-images/mazecar-initial.jpg)
+
+If you execute `yarn start-mazemotorcycle` you will see this initial page:
+
+![Maze Motorcycle initial page](readme-images/mazemotorcycle-initial.jpg)
