@@ -82,10 +82,11 @@ Customizing the white label for this project is a straightforward process, and t
 The white label functionality relies on two main components:
 
 1. **Changing Environment Variables:**
+
    - Update environment variables to correspond to the desired brand.
    - Use scripts in the `package.json` file to set the environment folder the application will use.
 
-    ![Maze Initialization Scripts](path/to/maze-initialization-scripts.png)
+   ![Maze Initialization Scripts](readme-images/package-scripts.jpg)
 
    - The scripts inside the red square determine which env folder the application will look at. For example, `yarn start-mazecar` uses the `env/mazecar` folder.
 
@@ -96,13 +97,15 @@ The white label functionality relies on two main components:
 To customize brand-specific images and style colors, the application is using two scripts located in the `src/scripts` folder:
 
 1. **`set-colors.cjs` Script:**
+
    - Changes the import keyword of the color variable file inside `src/styles/index.scss`. For example, running `yarn start-mazecar` will import "@import 'variables/mazecar-colors';".
 
-    ![Maze Set Colors Script](path/to/maze-set-colors-script.png)
-    ![Maze Color Variables Import](path/to/maze-color-variables-import.png)
+   ![Maze Set Colors Script](readme-images/set-colors.jpg)
+   ![Maze Color Variables Import](readme-images/style-index.jpg)
 
 2. **`set-images.cjs` Script:**
+
    - Change which images are exported by the `src/assets/index.js` file. In this case I'm changing the exports to get the logo, banner image and the images of the "brands that we work with" section of each brand.
 
-    ![Maze Set Images Script](path/to/maze-set-images-script.png)
-    ![Maze Images Import](path/to/maze-images-import.png)
+   ![Maze Set Images Script](readme-images/set-images.jpg)
+   ![Maze Images Import](readme-images/images-index.jpg)

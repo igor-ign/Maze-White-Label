@@ -4,7 +4,7 @@ const { writeFile, readFile } = require("./utils/file.cjs")
 const STYLES_PATH = path.resolve(__dirname, '..', 'styles', 'index.scss')
 const STYLES_IMPORT = `@import 'variables/${process.env.REACT_APP_BRAND_NAME}-colors'`
 
-function changeStyleBrandFirstLine() {
+function changeColorVariableFileImportByBrand() {
     const stylesExportFileData = readFile(STYLES_PATH)
     const filePerLine = stylesExportFileData.split(';')
 
@@ -14,5 +14,6 @@ function changeStyleBrandFirstLine() {
 }
 
 module.exports = {
-    changeStyleBrandFirstLine
+    changeColorVariableFileImportByBrand
 }
+
