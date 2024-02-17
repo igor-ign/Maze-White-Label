@@ -7,7 +7,6 @@ Maze is a versatile white-label application designed for car and motorcycle sell
 - [Introduction](#introduction)
 - [How to Run Maze](#how-to-run-maze)
 - [How the White Label Works](#how-the-white-label-works)
-- [About Json Server](#about-json-server)
 - [Project Structure](#project-structure)
 - [Coding Patterns](#coding-patterns)
 
@@ -73,3 +72,40 @@ If you execute `yarn start-mazecar` you will see this initial page:
 If you execute `yarn start-mazemotorcycle` you will see this initial page:
 
 ![Maze Motorcycle initial page](readme-images/mazemotorcycle-initial.jpg)
+
+## How The White Label Works
+
+Customizing the white label for this project is a straightforward process, and this section explains the technical details of this process.
+
+### Environment Variables and Brand Configuration
+
+The white label functionality relies on two main components:
+
+1. **Changing Environment Variables:**
+
+   - Update environment variables to correspond to the desired brand.
+   - Use scripts in the `package.json` file to set the environment folder the application will use.
+
+   ![Maze Initialization Scripts](readme-images/package-scripts.jpg)
+
+   - The scripts inside the red square determine which env folder the application will look at. For example, `yarn start-mazecar` uses the `env/mazecar` folder.
+
+   - The scripts in the yellow square initiate the application. (`yarn start-mazecar` and `yarn start-mazemotorcycle` as you saw before in this readme)
+
+### Brand-specific Images and Style Colors
+
+To customize brand-specific images and style colors, the application is using two scripts located in the `src/scripts` folder:
+
+1. **`set-colors.cjs` Script:**
+
+   - Changes the import keyword of the color variable file inside `src/styles/index.scss`. For example, running `yarn start-mazecar` will import "@import 'variables/mazecar-colors';".
+
+   ![Maze Set Colors Script](readme-images/set-colors.jpg)
+   ![Maze Color Variables Import](readme-images/style-index.jpg)
+
+2. **`set-images.cjs` Script:**
+
+   - Change which images are exported by the `src/assets/index.js` file. In this case I'm changing the exports to get the logo, banner image and the images of the "brands that we work with" section of each brand.
+
+   ![Maze Set Images Script](readme-images/set-images.jpg)
+   ![Maze Images Import](readme-images/images-index.jpg)

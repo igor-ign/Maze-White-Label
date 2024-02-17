@@ -11,3 +11,4 @@ function setBrandImages() {
 module.exports = {
     setBrandImages
 }
+
