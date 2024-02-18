@@ -104,8 +104,77 @@ To customize brand-specific images and style colors, the application is using tw
    ![Maze Color Variables Import](readme-images/style-index.jpg)
 
 2. **`set-images.cjs` Script:**
-
    - Change which images are exported by the `src/assets/index.js` file. In this case I'm changing the exports to get the logo, banner image and the images of the "brands that we work with" section of each brand.
 
    ![Maze Set Images Script](readme-images/set-images.jpg)
    ![Maze Images Import](readme-images/images-index.jpg)
+
+## Project Structure
+
+The project follows a well-organized folder structure to enhance readability and maintainability. Here's an overview of the main directories and their purposes:
+
+```text
+├── /env # Project enviroment variables
+│   	├─ /mazecar 
+│       └── /mazemotorcycle
+│ 		
+├── /public # Public assets (HTML, Favicon, etc..)
+├── /src # Application source code
+│    ├── /assets # Images and Icons
+│    │        ├─ /images 
+│    │        │   ├─ /mazecar
+│    │	      │	  └── /mazemotorcycle
+│    │	      └── index.js
+│    ├── /components # Components used throughout the project
+│    │        ├─ /component1
+│    │        │	    ├─ index.tsx
+│    │	      │	    └── index.scss
+│    │ 	      └── index.ts
+│    ├── /constants # Global constant variables
+│    │        ├─ constant1.ts
+│    │ 	      └── index.ts
+│    ├── /hooks # Custom hooks
+│    │    	 ├─  use-request.ts
+│    │ 	         └── index.ts
+│    ├── /interfaces # Global interfaces and types
+│    │        ├─ interface1.ts
+│    │ 	      └── index.ts
+│    ├── /pages # Main application pages
+│    │  	   ├─ /main 
+│    │         │   │ 	├─ /components # Components specific to the page
+│    │         │   │ 	│	   ├─ /component1
+│    │         │   │ 	│	   └── index.ts
+│    │	       │   │ 	├─ /interfaces # Interfaces and types specific to the page
+│    │         │   │ 	│	   ├─ interface1.ts
+│    │         │   │ 	│	   └── index.ts
+│    │	       │   │ 	└── /utils # Util functions specific to the page
+│    │         │   │  		   ├─ util1.ts
+│    │         │   │ 		   └── index.ts
+│    │         │   ├─ index.tsx
+│    │         │   └── styles.scss
+│    │         │     
+│    │         └── index.ts
+│    ├─ /scripts # White label scripts
+│    │ 	   └── index.ts
+│    ├─ /styles # Color variables and sass mixins
+│    │  	│   ├─ /mixins 
+│    │          │   │	   ├─ breakpoints.scss
+│    │	        │   │	   └── container.scss
+│    │	        │   └── /variables	
+│    │          │   	   ├─ mazecar-colors.scss
+│    │	        │	   └── mazemotorcycle-colors.scss
+│    │          └── index.scss
+│    │
+│    │
+│    ├── index.scss # Global styles
+│    └── index.tsx # ReactJS index page
+│
+├── db.json # Fake database where json-server will look at when you start it
+├── json-server.json # Json-server configuration file
+├── package.json # Node.js package file
+├── tsconfig.json # Typescript configuration file
+├── README.md # Project documentation
+└── LICENSE # Project license file
+```
+
+Feel free to explore each directory to understand its specific role and contribution to the overall project structure.
