@@ -8,7 +8,7 @@ Maze is a versatile white-label application designed for car and motorcycle sell
 - [How to Run Maze](#how-to-run-maze)
 - [How the White Label Works](#how-the-white-label-works)
 - [Project Structure](#project-structure)
-- [Coding Patterns](#coding-patterns)
+- [Coding Patterns and Adopted Practices](#coding-patterns-and-adopted-practices)
 
 ## Introduction
 
@@ -178,3 +178,192 @@ The project follows a well-organized folder structure to enhance readability and
 ```
 
 Feel free to explore each directory to understand its specific role and contribution to the overall project structure.
+
+## Coding Patterns and Adopted Practices
+
+In this project, I'm following a set of coding patterns and best practices to ensure consistency while coding and a more organized code. This section will be used to talk about the code patterns and best practices I have decided to follow.
+
+### Import Order 
+
+To maintain a well-organized codebase and enhance readability, this project adhere to a specific import order for our modules and components. The order is as follows:
+```typescript
+import { useState, useEffect } from 'react'; #1 - ReactJS imports
+import { useParams } from 'react-router-dom';  #2 - Libraries
+import ArrowBack from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForward from '@mui/icons-material/ArrowForwardIos';
+import Image from '../../assets'; #3 - Project images and Icons
+import { Header } from '../../components'; #4 - Global components 
+import { CONSTANT_VARIABLE } from '../../constants'; #5 - Global constants
+import { useRequest } from '../../hooks';  #6 - Custom hooks
+import { MyType, MyInterface } from '../../interfaces'; #7 - Global interfaces and types
+import { InternalComponent } from './components'; #8 - Components specific to the page
+import { INTERNAL_CONSTANT } from './constants'; #9 - Constant variables specific to the page
+import { InternalInterface, InternalType } from './interfaces'; #10 - Interfaces specific to the page
+import { InternalUtil } from './utils'; #11 - Util functions to the page
+import ./style.scss #12 - Page styles
+
+```
+  
+Key points of the import order:
+1. This import order applies consistently to all modules and components, ensuring a unified structure.
+2. ReactJS imports are placed at the beginning to emphasize their importance as the foundation of our components.
+3. The import for styles (./style.scss) is positioned last to maintain a clear separation between dependencies and styling.
+
+### Simplified Imports
+
+In order to simplify imports in this project I'm centralizing exports using dedicated `index.ts` files in each folder. Adopting centralized index files is a beneficial practice for maintaining a clean and efficient codebase in JavaScript/TypeScript projects, this technique simplifies import statements and offers several advantages like:
+1. **Code Organization:** It helps in organizing and centralizing your exports. All related modules are grouped together in the index file, making it easier to locate and manage dependencies.
+2. **Simplified Refactoring:** If you decide to change the internal structure of your modules or move files around, you only need to update the index file. This can simplify the process of refactoring and reduce the chances of breaking existing imports.
+
+Example of how the simplified imports work:
+
+```typescript
+Instead of:
+import { Header } from '../../components/header';
+import { Footer } from '../../components/footer';
+
+It will be:
+import { Header, Footer } from '../../components';
+
+Because of the centralized index.ts file:
+export { Header } from './header'
+export { Footer } from './footer'
+```
+
+### Component Organization
+
+Each component in this project adhere to a organizational structure I have defined to enhance code readability and maintainability. Below you can see an overview of how the components are organized in terms of code:
+
+```typescript
+export function MyComponent({ prop1, prop2...}) {
+// #1 - State variables
+const [apiInfo, setApiInfo] = useState<ApiInfoResponse>({})
+const [isApiLoading, setIsApiLoading] = useState<boolean>(false);
+const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+
+// #2 - Library hooks and custom hooks
+const { getCarDetails, getMotorcycleDetails } = useRequest();
+const { id } = useParams()
+
+// #3 - UseEffects
+ useEffect(() => {
+     async function getInfoFromApi() {
+          setIsApiLoading(true)
+          const { data } = await getApiData(Number(id))
+          setApiInfo(data)
+          setIsApiLoading(false)
+     }
+
+     getInfoFromApi()
+ }, [])
+}
+
+// #4 - Functions
+ function renderImageInfo() {
+     if (!isApiLoading) {
+         return (<img src={apiInfo?.images[currentImageIndex]} alt={`${apiInfo?.brand} ${apiInfo?.model}`} className='apiInfo-image'/>)
+     }
+
+     return <Loading />
+ }
+```
+
+The key points of this structure are:
+
+1. **Scalability:** The structure is designed to scale as the component evolves, making it easier to add new features and functionalities.
+2. **Consistency:** Following this structure ensures consistency across all components in the project.
+
+### Variable and Function Naming
+
+Consistent and meaningful variable and function names are essential for code readability and maintainability for all projects independent on which programming language or technology you are using. This project follow specific naming conventions to ensure clarity and understanding across the codebase.
+
+#### General Guidelines
+
+1. **Descriptive and Clear Names:**
+   - Choose names that clearly convey the purpose and functionality of the variable or function.
+
+   ```typescript
+   // Good example
+   const userId = user.id;
+
+   // Avoid
+   const id = user.id
+   ```
+   ```typescript
+   // Good example
+   function calculateTotalPrice() {
+       // function body
+   }
+   
+   // Avoid
+   function calculate() { # Calculate what? This function tell us nothing about its role.
+       // function body
+   }
+   ```
+
+2. **Uppercase name for Constants:**
+   - Use uppercase for constant variables and separate words with underscores.
+
+  ```typescript
+   // Good example
+   const MAX_COUNT = 100;
+   
+   // Avoid
+   const maxCount = 100;
+  ```
+
+3. **Use "has" and "is" Prefix for Booleans:**
+   - Prefix boolean variable names with "has" or "is", this is considered a good practice for naming boolean variables by multiple programming language communities.
+
+   ```typescript
+   // Good example
+   const hasPermission = true;
+
+   const isLoggedIn = false;
+
+   // Avoid
+   const permission = true;
+
+   const loggedIn = false;
+   ```
+   
+### SASS/CSS Patterns
+
+Talking about styling, this project follows the RSCSS (Reasonable Standard for CSS Stylesheet) pattern, which provides a structured and maintainable way to organize our SASS/CSS code. This pattern encourages a modular and scalable architecture, making it easier to manage and read style files across the project.
+
+RSCSS rely on three key points:
+
+1. **Components:** A component is the container of all the elements of the UI. They are named with at least two words, using dash as substitute to spaces, for example: `.search-bar`, `.card-header`.
+2. **Elements:** Elements are the pieces inside our components, they are selected using the CSS child selector `>`. Example of element selection:
+   ```sass
+   .card-header { # This is the component
+      ...styles
+      > .header-title { # This is our element!
+         ...styles
+      }
+   }
+   ```
+3. **Variants:** They are the modifiers of our components and elements. Example:
+      ```sass
+   .card-header { # This is the component
+      ...styles
+      > .header-title { 
+         ...styles
+
+         &.-highlithed { # This is our variant!
+            ...styles
+         }
+      }
+   }
+   ```
+
+This project also rely on the kebab-case to name its CSS/SASS classes. Example:
+```sass
+// Good
+.card-header {...}
+.page-container {...}
+
+// Avoid
+.cardHeader {...}
+.page_container {...}
+```
