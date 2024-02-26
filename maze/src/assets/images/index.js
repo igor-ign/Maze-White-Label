@@ -1,1 +1,1 @@
-export * from './mazemotorcycle/index.js'
+export * from './mazecar/index.js'

@@ -10,7 +10,7 @@
 
     @include container-config;
 
-    @include mobile {
+    @include apply-styles-for-multiple-devices(mobile, tablet) {
         justify-content: center;
     }
 
