@@ -146,7 +146,7 @@ The project follows a well-organized folder structure to enhance readability and
 │    │        │    │	   └── index.ts
 │    │	      │    ├─ /interfaces # Interfaces and types specific to the page
 │    │        │    │	   ├─ interface1.ts
-│    │        │    │	  └── index.ts
+│    │        │    │	   └── index.ts
 │    │	      │    ├─ /utils # Util functions specific to the page
 │    │        │    │     ├─ util1.ts
 │    │        │    │     └── index.ts
@@ -183,6 +183,20 @@ Feel free to explore each directory to understand its specific role and contribu
 
 In this project, I'm following a set of coding patterns and best practices to ensure consistency while coding and a more organized code. This section will be used to talk about the code patterns and best practices I have decided to follow.
 
+### Conventional Commits
+
+To maintain a standardized and semantic versioning approach, I have adopted Conventional Commits for the project commit messages. Conventional Commits are a convention for writing commit messages in a consistent and structured manner, this pattern help us to generate a clear and meaningful changelog.
+
+When commiting in this project the following format should be used:
+```plaintext
+<type>: <description>
+
+Example:
+feat: added user management page
+refactor: changed header dimensions
+fix: fixed user register form bug
+```
+  
 ### Import Order 
 
 To maintain a well-organized codebase and enhance readability, this project adhere to a specific import order for our modules and components. The order is as follows:
