@@ -4,29 +4,46 @@
     align-items: center;
     background-color: $primary;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px 0;
 
     @include container-config;
 
-    @include apply-styles-for-multiple-devices(mobile, tablet) {
-        justify-content: center;
-    }
-
     > .navigation-container {
         max-width: 90%;
         width: 500px;
 
+        @include apply-styles-for-multiple-devices(mobile, tablet) {
+            align-items: center;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        > .hamburger-icon {
+            background: none;
+            border: none;
+            color: $secondary;
+            cursor: pointer;
+        }
+
         > .navigation-links-list {
             display: flex;
-            flex-wrap: wrap;
             justify-content: space-evenly;
             list-style: none;
 
-            @include mobile {
+            @include apply-styles-for-multiple-devices(mobile, tablet) {
+                align-items: center;
+                background-color: $secondary;
                 flex-direction: column;
-                text-align: center;
+                gap: 40px;
+                height: 100dvh;
+                justify-content: start;
+                padding: 40px;
+                position: fixed;
+                right: 0px;
+                top: 100px;
+                width: 100%;
             }
             
             > .navigation-item {
@@ -34,6 +51,10 @@
                 cursor: pointer;
                 font-weight: 600;
                 padding: 10px;
+
+                @include apply-styles-for-multiple-devices(mobile, tablet) {
+                    color: $black; 
+                }
 
             }
         }
