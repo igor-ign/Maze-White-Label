@@ -134,26 +134,26 @@ The project follows a well-organized folder structure to enhance readability and
 │    │        ├─ constant1.ts
 │    │ 	      └── index.ts
 │    ├── /hooks # Custom hooks
-│    │    	 ├─  use-request.ts
-│    │ 	         └── index.ts
+│    │        ├─  use-request.ts
+│    │ 	      └── index.ts
 │    ├── /interfaces # Global interfaces and types
 │    │        ├─ interface1.ts
 │    │ 	      └── index.ts
 │    ├── /pages # Main application pages
-│    │  	   ├─ /main 
-│    │         │   │ 	├─ /components # Components specific to the page
-│    │         │   │ 	│	   ├─ /component1
-│    │         │   │ 	│	   └── index.ts
-│    │	       │   │ 	├─ /interfaces # Interfaces and types specific to the page
-│    │         │   │ 	│	   ├─ interface1.ts
-│    │         │   │ 	│	   └── index.ts
-│    │	       │   │ 	└── /utils # Util functions specific to the page
-│    │         │   │  		   ├─ util1.ts
-│    │         │   │ 		   └── index.ts
-│    │         │   ├─ index.tsx
-│    │         │   └── styles.scss
-│    │         │     
-│    │         └── index.ts
+│    │        ├─ /main 
+│    │        │    ├─ /components # Components specific to the page
+│    │        │    │	   ├─ /component1
+│    │        │    │	   └── index.ts
+│    │	      │    ├─ /interfaces # Interfaces and types specific to the page
+│    │        │    │	   ├─ interface1.ts
+│    │        │    │	  └── index.ts
+│    │	      │    ├─ /utils # Util functions specific to the page
+│    │        │    │     ├─ util1.ts
+│    │        │    │     └── index.ts
+│    │        │    ├─ index.tsx
+│    │        │    └── styles.scss
+│    │        │     
+│    │        └── index.ts
 │    ├─ /scripts # White label scripts
 │    │ 	   └── index.ts
 │    ├─ /styles # Color variables and sass mixins
