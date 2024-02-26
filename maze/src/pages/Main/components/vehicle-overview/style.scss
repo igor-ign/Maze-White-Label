@@ -22,7 +22,7 @@
             list-style: none;
             margin-top: 40px;
 
-            @include applyStyleForMultipleDevices(mobile, tablet) {
+            @include apply-styles-for-multiple-devices(mobile, tablet) {
                 justify-content: center;
             }
 

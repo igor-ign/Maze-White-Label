@@ -2,7 +2,7 @@ import axios from "axios"
 import { CarDetailsResponse, MotorcycleDetailsResponse, VehicleListResponse } from "../interfaces"
 
 export function useRequest() {
-    const baseUrl = 'http://localhost:3000'
+    const baseUrl = 'http://localhost:3001'
 
     async function getCarOverview() {
         return await axios.get<VehicleListResponse[]>(`${baseUrl}/car-overview`)

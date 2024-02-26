@@ -23,7 +23,7 @@
   }
 
 
-  @mixin applyStyleForMultipleDevices($keys...) {
+  @mixin apply-styles-for-multiple-devices($keys...) {
     @each $key in $keys {
       @if $key == mobile {
         @include mobile {

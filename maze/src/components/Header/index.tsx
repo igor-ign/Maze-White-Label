@@ -3,7 +3,6 @@ import { IMAGES } from "../../assets/images";
 import { BRAND_DISPLAY_NAME, BRAND_NAME } from "../../constants";
 import './style.scss'
 
-
 // TODO: Hamburger Menu
 export function Header() {
     const navigate = useNavigate()

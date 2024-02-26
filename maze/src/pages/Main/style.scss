@@ -14,7 +14,7 @@
 
             @include container-config;
 
-            @include applyStyleForMultipleDevices(mobile, tablet) {
+            @include apply-styles-for-multiple-devices(mobile, tablet) {
                 justify-content: space-around;
             }
 
