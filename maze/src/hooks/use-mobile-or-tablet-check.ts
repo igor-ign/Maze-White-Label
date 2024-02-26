@@ -5,11 +5,11 @@ export function useMobileOrTabletCheck() {
 
     const tabletMaxWidth = 1100
 
-    function handleResize() {
-        setWidth(window.innerWidth);
-    }
-
     useEffect(() => {
+        function handleResize() {
+            setWidth(window.innerWidth);
+        }
+
         window.addEventListener('resize', handleResize);
         return () => {
             window.removeEventListener('resize', handleResize);
