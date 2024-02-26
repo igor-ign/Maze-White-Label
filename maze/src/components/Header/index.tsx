@@ -1,10 +1,10 @@
+import { useState } from "react";
 import { useNavigate} from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import { IMAGES } from "../../assets/images";
 import { BRAND_DISPLAY_NAME, BRAND_NAME } from "../../constants";
 import { useMobileOrTabletCheck } from "../../hooks";
 import './style.scss'
-import { useState } from "react";
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
