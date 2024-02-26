@@ -51,9 +51,9 @@ First things first, you need to clone the project. (I'm considering you use VSCo
 
 4. When the terminal is opened, you should type the following and press enter in order to download all the project dependencies and libraries: `yarn install` or the short one `yarn`. This process of downloading all the dependencies will not take long depending on your computer.
 5. Now you'll need two terminals: one to run the project and other one to run the json server so the website lists can be fullfiled with data from a "fake api".
-6. Starting with the json server, you'll need to type in one of the terminals you have opened: `npx json-server --watch db.json --d 3000`.
+6. Starting with the json server, you'll need to type in one of the terminals you have opened: `npx json-server --watch db.json --d 3000 --port 3001`.
 
-You use "--watch {file}" to specify the file where json server should get the "api" data and "--d {milliseconds}" to specify how long the json server should take (a.k.a the delay) to give you the response data. I recommend you to use this delay so the website look like a real world application where the API often take some seconds to answer your request.
+You use "--watch {file}" to specify the file where json server should get the "api" data and "--d {milliseconds}" to specify how long the json server should take (a.k.a the delay) to give you the response data. I recommend you to use this delay so the website look like a real world application where the API often take some seconds to answer your request. **Also, json server runs in the port 3000 by default so it is important to use the `--port 3001` flag to specify that the json server port is 3001 so it avoid conflicts with ReactJS which runs the app in the port 3000**
 
 7. In the second terminal, which is not beeing used yet, you can type two different commands to start the application:
 
