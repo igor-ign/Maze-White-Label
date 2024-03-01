@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { MainPage, VehicleDetailsPage } from '../pages'
+import { MainPage, Search, VehicleDetailsPage } from '../pages'
 
 export const APP_ROUTES = createBrowserRouter([
     {
@@ -9,5 +9,9 @@ export const APP_ROUTES = createBrowserRouter([
     {
         path: "/vehicle/:id",
         element: <VehicleDetailsPage />
+    },
+    {
+        path: "/search",
+        element: <Search />
     }
   ]);
