@@ -2,4 +2,19 @@
 
 .search-page-container {
     background-color: $primary;
+
+    > .vehicle-list-container {
+        background-color: $secondary;
+
+        > .vehicle-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            list-style: none;
+            padding: 30px 0;
+
+            @include container-config
+        }
+    }
 }
