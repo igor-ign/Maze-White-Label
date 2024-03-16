@@ -1,11 +1,16 @@
+import { useNavigate } from 'react-router-dom'
+import { getVehiclePriceFormatted } from '../../../../utils'
+import { VehicleCardProps } from '../../interfaces'
 import './style.scss'
 
-export function VehicleCard() {
+export function VehicleCard({ id, image, brand, model, price}: VehicleCardProps) {
+    const navigate = useNavigate()
+
     return <li className="vehicle-card-container">
-        <div className='mock-photo'>a</div>
-        <span className="brand-name">Volkswagen</span>
-        <h3 className="vehicle-name">Golf 2024</h3>
-        <span className="vehicle-price">$100.000,00</span>
-        <button className="info-button">See Details</button>
+        <img className='vehicle-image' src={image} alt={`${model} card`}/>
+        <span className="brand-name">{brand}</span>
+        <h3 className="vehicle-name">{model}</h3>
+        <span className="vehicle-price">{getVehiclePriceFormatted(price)}</span>
+        <button className="info-button" onClick={() => navigate(`/vehicle/${id}`)}>See Details</button>
     </li>
 }

@@ -6,6 +6,7 @@ import { Header } from '../../components'
 import { BRAND_NAME } from '../../constants';
 import { useRequest } from '../../hooks';
 import { CarDetailsResponse, MotorcycleDetailsResponse } from '../../interfaces';
+import { getVehiclePriceFormatted } from '../../utils';
 import { CarInfo, DetailsLoading, MotorcycleInfo } from './components';
 import './style.scss'
 
@@ -72,7 +73,7 @@ export function VehicleDetailsPage() {
                     {BRAND_NAME === 'mazecar' ? <CarInfo car={vehicle as CarDetailsResponse}/> : <MotorcycleInfo motorcycle={vehicle as MotorcycleDetailsResponse}/>}
                 </ul>
 
-                <span className="vehicle-price">${vehicle?.price}</span>
+                <span className="vehicle-price">{getVehiclePriceFormatted(vehicle?.price || 0)}</span>
                 <button className="buy-button">Buy Now</button>
             </div>
             }
