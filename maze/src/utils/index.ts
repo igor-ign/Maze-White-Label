@@ -1,0 +1,1 @@
+export { getVehiclePriceFormatted } from './price'

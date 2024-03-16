@@ -7,10 +7,9 @@
     height: 300px;
     width: 280px;
 
-    > .mock-photo {
-        background-color: blue;
-        border-radius: 5px;
-        height: 150px;
+    > .vehicle-image {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
         margin-bottom: 10px;
     }
 

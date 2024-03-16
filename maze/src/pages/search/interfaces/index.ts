@@ -1,0 +1,1 @@
+export type { VehicleCardProps } from './vehicle-card'

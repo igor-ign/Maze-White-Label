@@ -9,6 +9,9 @@ export interface VehicleListResponse {
 export type TransmissionTypes = "AUTOMATIC" | "MANUAL";
 export type VehicleColorTypes = "White" | "Black" | "Green" | "Red" | "Blue" | "Silver" | "Grey";
 export type VehicleFuelTypes = "Gasoline" | "Diesel";
+type MotorcycleBrandTypes = 'Kawasaki' | 'Ducatti' | 'Honda' | 'BMW' | 'Suzuki' | 'Yamaha'
+type CarBrandTypes = 'Nissan' | 'BMW' | 'Alfa Romeo' | 'Volvo' | 'Land Rover' | 'Mercedes-Benz' | 'Jaguar' | 'Ford' | 'Volkswagen'
+export type VehicleBrandTypes = MotorcycleBrandTypes & CarBrandTypes
 
 export interface CarDetailsResponse {
     id: number;
@@ -32,4 +35,27 @@ export interface MotorcycleDetailsResponse {
     price: number;
     year: number;
     color: VehicleColorTypes;
+}
+
+export interface VehicleSearchResponse {
+    id: number;
+    brand: VehicleBrandTypes;
+    model: string;
+    image: string;
+    price: number;
+    year: number;
+}
+
+export interface CarSearchFilters {
+    brand?: CarBrandTypes;
+    model?: string;
+    price?: number;
+    year?: string;
+}
+
+export interface MotorcycleSearchFilters {
+    brand?: MotorcycleBrandTypes;
+    model?: string;
+    price?: number;
+    year?: string;
 }

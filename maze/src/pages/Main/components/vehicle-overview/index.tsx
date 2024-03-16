@@ -5,6 +5,7 @@ import { useRequest } from '../../../../hooks'
 import { VehicleListResponse } from '../../../../interfaces'
 import './style.scss'
 import { VehicleOverviewCard } from '../vehicle-overview-card'
+import { useNavigate } from 'react-router-dom'
 
 export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
     const [ isListInViewport, setIsListInViewport] = useState<boolean>()
@@ -12,6 +13,7 @@ export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
     const [ isOverviewLoading, setIsOverviewLoading] = useState<boolean>(true);
 
     const { getCarOverview, getMotorcycleOverview } = useRequest()
+    const navigate = useNavigate()
     const carOverviewListRef = useRef(null)
 
     useEffect(() => {
@@ -67,7 +69,7 @@ export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
                 })}
             </ul>
 
-            {!isOverviewLoading && <button className="more-button">More</button>}
+            {!isOverviewLoading && <button className="more-button" onClick={() => navigate('/search')}>More</button>}
         </div>
         </section>
 }

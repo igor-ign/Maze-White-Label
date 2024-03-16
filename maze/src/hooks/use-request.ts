@@ -1,5 +1,5 @@
 import axios from "axios"
-import { CarDetailsResponse, MotorcycleDetailsResponse, VehicleListResponse } from "../interfaces"
+import { CarDetailsResponse, CarSearchFilters, MotorcycleDetailsResponse, MotorcycleSearchFilters, VehicleListResponse, VehicleSearchResponse } from "../interfaces"
 
 export function useRequest() {
     const baseUrl = 'http://localhost:3001'
@@ -20,10 +20,20 @@ export function useRequest() {
         return await axios.get<MotorcycleDetailsResponse>(`${baseUrl}/motorcycles/${id}`)
     }
 
+    async function getCarSearch(filters?: CarSearchFilters) {
+        return axios.get<VehicleSearchResponse[]>(`${baseUrl}/car-search`, { params: filters })
+    }
+
+    async function getMotorcycleSearch(filters?: MotorcycleSearchFilters) {
+        return axios.get<VehicleSearchResponse[]>(`${baseUrl}/motorcycle-search`, { params: filters })
+    }
+
     return {
         getCarOverview,
         getMotorcycleOverview,
         getCarDetails,
-        getMotorcycleDetails
+        getMotorcycleDetails,
+        getCarSearch,
+        getMotorcycleSearch 
     }
 }
