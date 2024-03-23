@@ -21,11 +21,21 @@ export function useRequest() {
     }
 
     async function getCarSearch(filters?: CarSearchFilters) {
-        return axios.get<VehicleSearchResponse[]>(`${baseUrl}/car-search`, { params: filters })
+        const filtersWithoutMaxAndMinPrice = {
+            brand: filters?.brand,
+            year: filters?.year
+        }
+
+        return axios.get<VehicleSearchResponse[]>(`${baseUrl}/car-search?price_gt=${filters?.minPrice}&price_lt=${filters?.maxPrice}`, { params: filtersWithoutMaxAndMinPrice })
     }
 
     async function getMotorcycleSearch(filters?: MotorcycleSearchFilters) {
-        return axios.get<VehicleSearchResponse[]>(`${baseUrl}/motorcycle-search`, { params: filters })
+        const filtersWithoutMaxAndMinPrice = {
+            brand: filters?.brand,
+            year: filters?.year
+        }
+
+        return axios.get<VehicleSearchResponse[]>(`${baseUrl}/motorcycle-search?price_gt=${filters?.minPrice}&price_lt=${filters?.maxPrice}`, { params: filtersWithoutMaxAndMinPrice })
     }
 
     return {

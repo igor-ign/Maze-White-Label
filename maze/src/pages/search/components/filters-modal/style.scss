@@ -1,0 +1,55 @@
+@import '../../../../styles/index.scss';
+
+.modal-container {
+    align-items: center;
+    background-color: $modal-background;
+    display: flex;
+    height: 100dvh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100dvw;
+    z-index: 3;
+
+    > .modal-content {
+        background-color: $secondary;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: auto;
+        max-width: 95%;
+        padding: 15px;
+        width: 400px;
+
+        > .modal-header {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+
+            > .modal-title {
+                font-size: 24px;
+            }
+
+            > .close-modal {
+                background: none;
+                border-radius: 90px;
+                border: none;
+                cursor: pointer;
+                text-align: center;
+                transition: 0.2s ease-in-out;
+                width: 30px;
+    
+                &:hover {
+                    background-color: $secondary-hover;
+                }
+            }
+        }
+
+        > .filters-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

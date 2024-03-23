@@ -48,14 +48,14 @@ export interface VehicleSearchResponse {
 
 export interface CarSearchFilters {
     brand?: CarBrandTypes;
-    model?: string;
-    price?: number;
     year?: string;
+    minPrice?: number;
+    maxPrice?: number;
 }
 
 export interface MotorcycleSearchFilters {
     brand?: MotorcycleBrandTypes;
-    model?: string;
-    price?: number;
     year?: string;
+    minPrice?: number;
+    maxPrice?: number;
 }

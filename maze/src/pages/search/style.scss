@@ -6,6 +6,31 @@
     > .vehicle-list-container {
         background-color: $secondary;
 
+        > .filters-button {
+            background-color: $primary;
+            border-radius: 40px;
+            border: none;
+            color: $secondary;
+            height: 50px;
+            position: fixed;
+            right: 120px;
+            top: 120px;
+            width: 50px;
+            z-index: 2;
+
+            @include mobile {
+                bottom: 50px;
+                right: 20px;
+                top: unset;
+            }
+
+            @include tablet {
+                bottom: 50px;
+                right: 50px;
+                top: unset;
+            }
+        }
+
         > .vehicle-list {
             display: flex;
             flex-wrap: wrap;
