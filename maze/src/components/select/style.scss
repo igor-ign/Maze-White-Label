@@ -1,0 +1,19 @@
+@import '../../styles/index.scss';
+
+.maze-select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: left;
+    
+    > .maze-select-input {
+        border-radius: 5px;
+        border: 1px solid $select-border-color;
+        height: 36px;
+        width: 100%;
+
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+}

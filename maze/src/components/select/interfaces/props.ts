@@ -5,5 +5,9 @@ interface MazeSelectOptions {
 
 export interface MazeSelectProps {
     selectLabel: string;
-    options: MazeSelectOptions[]
+    options: MazeSelectOptions[];
+    placeholder: string;
+    disabled: boolean;
+    onChange: (value: string) => void;
+    value: string;
 }

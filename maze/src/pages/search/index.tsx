@@ -40,13 +40,18 @@ export function Search() {
         }
 
         getVehicleInformation()
-    }, [])
+    }, [filters.brand, filters.maxPrice, filters.minPrice, filters.year])
 
     return <div className="search-page-container">
         <Header />
 
         {isFiltersOpen && 
-        <FiltersModal setFilters={(filters) => setFilters(filters)} setIsModalOpen={(isOpen) => setIsFiltersOpen(isOpen)}/>}
+        <FiltersModal 
+        setFilters={(filters) => 
+        setFilters(filters)} 
+        setIsModalOpen={(isOpen) => setIsFiltersOpen(isOpen)}
+        clearVehicles={() => setVehicles([])}
+        />}
         <main className="vehicle-list-container">
             <button className="filters-button" onClick={() => setIsFiltersOpen(true)}>
                 <FilterAltIcon />
