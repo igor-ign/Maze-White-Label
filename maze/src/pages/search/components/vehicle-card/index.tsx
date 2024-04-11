@@ -6,7 +6,7 @@ import './style.scss'
 export function VehicleCard({ id, image, brand, model, price}: VehicleCardProps) {
     const navigate = useNavigate()
 
-    return <li className="vehicle-card-container">
+    return <li className="vehicle-card-container" key={id}>
         <img className='vehicle-image' src={image} alt={`${model} card`}/>
         <span className="brand-name">{brand}</span>
         <h3 className="vehicle-name">{model}</h3>

@@ -21,11 +21,41 @@ export function useRequest() {
     }
 
     async function getCarSearch(filters?: CarSearchFilters) {
-        return axios.get<VehicleSearchResponse[]>(`${baseUrl}/car-search`, { params: filters })
+        const filtersFormatted = {
+            brand: filters?.brand,
+            year: filters?.year,
+            price_start: filters?.minPrice, 
+            price_limit: filters?.maxPrice
+        };
+    
+        return await axios.get<VehicleSearchResponse[]>(`${baseUrl}/car-search`, { params: filtersFormatted });
     }
 
     async function getMotorcycleSearch(filters?: MotorcycleSearchFilters) {
-        return axios.get<VehicleSearchResponse[]>(`${baseUrl}/motorcycle-search`, { params: filters })
+        const filtersFormatted = {
+            brand: filters?.brand,
+            year: filters?.year,
+            price_start: filters?.minPrice, 
+            price_limit: filters?.maxPrice
+        };
+    
+        return await axios.get<VehicleSearchResponse[]>(`${baseUrl}/motorcycle-search`, { params: filtersFormatted });
+    }
+
+    async function getMazeCarBrands() {
+        return await axios.get<string[]>(`${baseUrl}/mazecar-brands`)
+    }
+
+    async function getMazeCarYears() {
+        return await axios.get<string[]>(`${baseUrl}/mazecar-years`)
+    }
+
+    async function getMazeMotorcycleBrands() {
+        return await axios.get<string[]>(`${baseUrl}/mazemotorcycle-brands`)
+    }
+
+    async function getMazeMotorcycleYears() {
+        return await axios.get<string[]>(`${baseUrl}/mazemotorcycle-years`)
     }
 
     return {
@@ -34,6 +64,10 @@ export function useRequest() {
         getCarDetails,
         getMotorcycleDetails,
         getCarSearch,
-        getMotorcycleSearch 
+        getMotorcycleSearch,
+        getMazeCarBrands,
+        getMazeCarYears,
+        getMazeMotorcycleBrands,
+        getMazeMotorcycleYears
     }
 }

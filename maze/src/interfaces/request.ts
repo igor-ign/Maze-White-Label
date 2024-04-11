@@ -9,7 +9,7 @@ export interface VehicleListResponse {
 export type TransmissionTypes = "AUTOMATIC" | "MANUAL";
 export type VehicleColorTypes = "White" | "Black" | "Green" | "Red" | "Blue" | "Silver" | "Grey";
 export type VehicleFuelTypes = "Gasoline" | "Diesel";
-type MotorcycleBrandTypes = 'Kawasaki' | 'Ducatti' | 'Honda' | 'BMW' | 'Suzuki' | 'Yamaha'
+type MotorcycleBrandTypes = 'Kawasaki' | 'Ducatti' | 'Honda' | 'BMW' | 'Suzuki' | 'Yamaha' | undefined
 type CarBrandTypes = 'Nissan' | 'BMW' | 'Alfa Romeo' | 'Volvo' | 'Land Rover' | 'Mercedes-Benz' | 'Jaguar' | 'Ford' | 'Volkswagen'
 export type VehicleBrandTypes = MotorcycleBrandTypes & CarBrandTypes
 
@@ -48,14 +48,14 @@ export interface VehicleSearchResponse {
 
 export interface CarSearchFilters {
     brand?: CarBrandTypes;
-    model?: string;
-    price?: number;
     year?: string;
+    minPrice?: number;
+    maxPrice?: number;
 }
 
 export interface MotorcycleSearchFilters {
     brand?: MotorcycleBrandTypes;
-    model?: string;
-    price?: number;
     year?: string;
+    minPrice?: number;
+    maxPrice?: number;
 }

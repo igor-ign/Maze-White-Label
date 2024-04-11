@@ -1,0 +1,1 @@
+export type { MazeSelectProps } from './props'
