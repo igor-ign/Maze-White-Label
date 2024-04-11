@@ -21,12 +21,14 @@ export function useRequest() {
     }
 
     async function getCarSearch(filters?: CarSearchFilters) {
-        const filtersWithoutMaxAndMinPrice = {
+        const filtersFormatted = {
             brand: filters?.brand,
-            year: filters?.year
-        }
-
-        return await axios.get<VehicleSearchResponse[]>(`${baseUrl}/car-search?price_start==${filters?.minPrice}&price_limit=${filters?.maxPrice}`, { params: filtersWithoutMaxAndMinPrice })
+            year: filters?.year,
+            price_start: filters?.minPrice, 
+            price_limit: filters?.maxPrice
+        };
+    
+        return await axios.get<VehicleSearchResponse[]>(`${baseUrl}/car-search`, { params: filtersFormatted });
     }
 
     async function getMotorcycleSearch(filters?: MotorcycleSearchFilters) {
