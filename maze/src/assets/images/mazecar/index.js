@@ -9,10 +9,12 @@ import NissanLogo from './nissan.png'
 import LandRoverLogo from './rover.png'
 import VolvoLogo from './volvo.png'
 import VolkswagenLogo from './wv.png'
+import Favicon from './car.ico'
 
 export const IMAGES = {
     LOGO: Logo,
     BANNER_IMAGE: BannerImage,
+    FAVICON: Favicon,
     TRUSTED_BRANDS: [
         { 
             alt: "Alfa Romeo Logo", 
