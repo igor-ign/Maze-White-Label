@@ -21,8 +21,8 @@ export function Header() {
         <ul className="navigation-links-list">
             <li className="navigation-item" onClick={(() => navigate('/'))}>Home</li>
             <li className="navigation-item">{BRAND_NAME === "mazecar" ? "Cars" : "Motorcycles"}</li>
-            <li className="navigation-item" onClick={() => navigate('/search')}>Search</li>
             <li className="navigation-item">About</li>
+            <li className="navigation-item" onClick={() => navigate('/search')}>Search</li>
         </ul>
         )
     }

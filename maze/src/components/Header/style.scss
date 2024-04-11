@@ -29,7 +29,8 @@
 
         > .navigation-links-list {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: flex-end;
+            gap: 40px;
             list-style: none;
 
             @include apply-styles-for-multiple-devices(mobile, tablet) {
@@ -52,6 +53,10 @@
                 cursor: pointer;
                 font-weight: 600;
                 padding: 10px;
+
+                &:nth-last-child(1) {
+                    padding: 10px 0 10px 10px;
+                }
 
                 @include apply-styles-for-multiple-devices(mobile, tablet) {
                     color: $black; 
