@@ -6,10 +6,12 @@ import HondaLogo from './honda.png'
 import KawasakiLogo from './kawasaki.png'
 import SuzukiLogo from './suzuki.png'
 import YamahaLogo from './yamaha.png'
+import Favicon from './motorcycle.ico'
 
 export const IMAGES = {
     LOGO: Logo,
     BANNER_IMAGE: BannerImage,
+    FAVICON: Favicon,
     TRUSTED_BRANDS: [
         {
             alt: "BMW Logo",
