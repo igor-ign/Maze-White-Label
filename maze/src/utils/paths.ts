@@ -1,7 +1,12 @@
 export function getAppRoutePaths(id?: number) {
-    return {
+    if (id) return {
         HOME: '/',
         SEARCH_VEHICLES: "/search",
-        VEHICLE_DETAILS: `/vehicle/${id || ':id'}`
+        VEHICLE_DETAILS: `/vehicle/${id}`
+    }
+
+    return {
+        HOME: '/',
+        SEARCH_VEHICLES: "/search"
     }
 }
