@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { CircularProgress } from '@mui/material'
 import { BRAND_NAME } from '../../../../constants'
 import { useRequest } from '../../../../hooks'
 import { VehicleListResponse } from '../../../../interfaces'
-import './style.scss'
+import { getAppRoutePaths } from '../../../../utils'
 import { VehicleOverviewCard } from '../vehicle-overview-card'
-import { useNavigate } from 'react-router-dom'
+import './style.scss'
 
 export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
     const [ isListInViewport, setIsListInViewport] = useState<boolean>()
@@ -15,6 +16,8 @@ export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
     const { getCarOverview, getMotorcycleOverview } = useRequest()
     const navigate = useNavigate()
     const carOverviewListRef = useRef(null)
+
+    const appRoutes = getAppRoutePaths()
 
     useEffect(() => {
         const observerOptions = {
@@ -69,7 +72,7 @@ export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
                 })}
             </ul>
 
-            {!isOverviewLoading && <button className="more-button" onClick={() => navigate('/search')}>More</button>}
+            {!isOverviewLoading && <button className="more-button" onClick={() => navigate(appRoutes.SEARCH_VEHICLES)}>More</button>}
         </div>
         </section>
 }
