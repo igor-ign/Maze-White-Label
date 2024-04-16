@@ -59,7 +59,7 @@ export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
     }, [isListInViewport])
 
     return <section className="vehicle-overview-container">
-        <div className="vehicle-overview-content">
+        <div className="vehicle-overview-content" id='vehicles'>
             <h1 className="overview-title">Some of the available {brandKeyword}s</h1>
 
             <ul className="vehicle-list" ref={carOverviewListRef}>
