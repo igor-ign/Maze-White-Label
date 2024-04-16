@@ -24,7 +24,7 @@ export function MainPage() {
                     <img src={IMAGES.BANNER_IMAGE} alt={`${BRAND_DISPLAY_NAME} banner. White ${keywordBasedOnBrand} without background.`} className="banner-image" />
                 </section>
                 
-                <section className="about-us-container">
+                <section className="about-us-container" id="about">
                     <div className="about-us-content">
                         <h2 className="about-us-title">About Us</h2>
                         {aboutUsParagraphs?.map(({ key, paragraph }) => {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate} from "react-router-dom";
+import { useLocation, useNavigate} from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import { IMAGES } from "../../assets/images";
 import { BRAND_DISPLAY_NAME, BRAND_NAME } from "../../constants";
@@ -9,19 +9,31 @@ import './style.scss'
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
+    const location = useLocation();
     const navigate = useNavigate()
     const isDeviceTabletOrMobile = useMobileOrTabletCheck()
 
+    function handleClickHeaderItems() {
+        const isUserInHomePage = location.pathname === '/'
+
+        if (!isUserInHomePage) navigate('/')
+    }
+
     function renderHeaderNavigationItems() {
         const isMobileMenuOpen = isDeviceTabletOrMobile && isMenuOpen
-        const isDesktop = !isDeviceTabletOrMobile
-        const isNavigationItemsVisible = isDesktop || isMobileMenuOpen
+        const isDesktopOrNotebook = !isDeviceTabletOrMobile
+        const isNavigationItemsVisible = isDesktopOrNotebook || isMobileMenuOpen
+        const vehicleKeyword = BRAND_NAME === "mazecar" ? "Cars" : "Motorcycles"
 
         if (isNavigationItemsVisible) return (
         <ul className="navigation-links-list">
             <li className="navigation-item" onClick={(() => navigate('/'))}>Home</li>
-            <li className="navigation-item">{BRAND_NAME === "mazecar" ? "Cars" : "Motorcycles"}</li>
-            <li className="navigation-item">About</li>
+            <li className="navigation-item" onClick={handleClickHeaderItems}>
+                <a className="scroll-link" href="#vehicles">{vehicleKeyword}</a>
+            </li>
+            <li className="navigation-item" onClick={handleClickHeaderItems}>
+                <a className="scroll-link" href="#about">About</a>
+            </li>
             <li className="navigation-item" onClick={() => navigate('/search')}>Search</li>
         </ul>
         )
