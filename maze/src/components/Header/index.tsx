@@ -4,6 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { IMAGES } from "../../assets/images";
 import { BRAND_DISPLAY_NAME, BRAND_NAME } from "../../constants";
 import { useMobileOrTabletCheck } from "../../hooks";
+import { getAppRoutePaths } from "../../utils";
 import './style.scss'
 
 export function Header() {
@@ -12,11 +13,13 @@ export function Header() {
     const location = useLocation();
     const navigate = useNavigate()
     const isDeviceTabletOrMobile = useMobileOrTabletCheck()
+    
+    const appRoutePaths = getAppRoutePaths()
 
     function handleClickHeaderItems() {
-        const isUserInHomePage = location.pathname === '/'
+        const isUserInHomePage = location.pathname === appRoutePaths.HOME
 
-        if (!isUserInHomePage) navigate('/')
+        if (!isUserInHomePage) navigate(appRoutePaths.HOME)
     }
 
     function renderHeaderNavigationItems() {
@@ -27,14 +30,14 @@ export function Header() {
 
         if (isNavigationItemsVisible) return (
         <ul className="navigation-links-list">
-            <li className="navigation-item" onClick={(() => navigate('/'))}>Home</li>
+            <li className="navigation-item" onClick={(() => navigate(appRoutePaths.HOME))}>Home</li>
             <li className="navigation-item" onClick={handleClickHeaderItems}>
                 <a className="scroll-link" href="#vehicles">{vehicleKeyword}</a>
             </li>
             <li className="navigation-item" onClick={handleClickHeaderItems}>
                 <a className="scroll-link" href="#about">About</a>
             </li>
-            <li className="navigation-item" onClick={() => navigate('/search')}>Search</li>
+            <li className="navigation-item" onClick={() => navigate(appRoutePaths.SEARCH_VEHICLE)}>Search</li>
         </ul>
         )
     }

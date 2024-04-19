@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { BRAND_NAME } from '../../../../constants'
 import { useRequest } from '../../../../hooks'
 import { SkeletonListUtilProps, VehicleListResponse } from '../../../../interfaces'
-import { getSkeletonLoaderList } from '../../../../utils'
+import { getAppRoutePaths, getSkeletonLoaderList } from '../../../../utils'
 import { VehicleOverviewCard } from '../vehicle-overview-card'
 import './style.scss'
 
@@ -15,6 +15,8 @@ export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
     const { getCarOverview, getMotorcycleOverview } = useRequest()
     const navigate = useNavigate()
     const carOverviewListRef = useRef(null)
+    
+    const appRoutePaths = getAppRoutePaths()
 
     useEffect(() => {
         const observerOptions = {
@@ -84,7 +86,7 @@ export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
             </ul>
 
             {!isOverviewLoading && 
-            <button className="more-button" onClick={() => navigate('/search')}>More</button>
+            <button className="more-button" onClick={() => navigate(appRoutePaths.SEARCH_VEHICLE)}>More</button>
             }
         </div>
         </section>
