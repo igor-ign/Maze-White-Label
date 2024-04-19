@@ -45,6 +45,28 @@ export function VehicleDetailsPage() {
         return <SkeletonLoader width='500px' height='300px' borderRadius='0'/>
     }
 
+    function renderVehicleInfo() {
+        if (isDetailsLoading) {
+            return <SkeletonLoader width='400px' height='334px' borderRadius='0px'/>
+        }
+
+        return  <div className="vehicle-info-container">
+                    <h1 className="vehicle-name">
+                        {vehicle?.brand} {vehicle?.model}
+                    </h1>
+
+                    <ul className="information-box-list">
+                        {BRAND_NAME === 'mazecar' ? 
+                        <CarInfo car={vehicle as CarDetailsResponse}/> 
+                        : 
+                        <MotorcycleInfo motorcycle={vehicle as MotorcycleDetailsResponse}/>}
+                    </ul>
+
+                    <span className="vehicle-price">{getVehiclePriceFormatted(vehicle?.price || 0)}</span>
+                    <button className="buy-button">Buy Now</button>
+                </div>
+    }
+
     return <main className="details-page-container">
         <Header />
         
@@ -61,22 +83,7 @@ export function VehicleDetailsPage() {
                 </button>
             </div>
 
-            {isDetailsLoading && <SkeletonLoader width='400px' height='334px' borderRadius='0px'/>}
-            {
-            !isDetailsLoading &&             
-            <div className="vehicle-info-container">
-                <h1 className="vehicle-name">
-                    {vehicle?.brand} {vehicle?.model}
-                </h1>
-
-                <ul className="information-box-list">
-                    {BRAND_NAME === 'mazecar' ? <CarInfo car={vehicle as CarDetailsResponse}/> : <MotorcycleInfo motorcycle={vehicle as MotorcycleDetailsResponse}/>}
-                </ul>
-
-                <span className="vehicle-price">{getVehiclePriceFormatted(vehicle?.price || 0)}</span>
-                <button className="buy-button">Buy Now</button>
-            </div>
-            }
+            {renderVehicleInfo()}
         </div>
     </main>
 }
