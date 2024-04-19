@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ArrowBack from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForward from '@mui/icons-material/ArrowForwardIos';
-import { Header } from '../../components'
+import { Header, SkeletonLoader } from '../../components'
 import { BRAND_NAME } from '../../constants';
 import { useRequest } from '../../hooks';
 import { CarDetailsResponse, MotorcycleDetailsResponse } from '../../interfaces';
 import { getVehiclePriceFormatted } from '../../utils';
-import { CarInfo, DetailsLoading, MotorcycleInfo } from './components';
+import { CarInfo, MotorcycleInfo } from './components';
 import './style.scss'
 
 export function VehicleDetailsPage() {
@@ -42,7 +42,7 @@ export function VehicleDetailsPage() {
             return (<img src={vehicle?.images[currentImage]} alt={`${vehicle?.brand} ${vehicle?.model}`} className='vehicle-image'/>)
         }
 
-        return <DetailsLoading />
+        return <SkeletonLoader width='500px' height='300px' borderRadius='0'/>
     }
 
     return <main className="details-page-container">
@@ -50,18 +50,18 @@ export function VehicleDetailsPage() {
         
         <div className="vehicle-details-container">
             <div className="vehicle-image-container">
-                <button className="image-button previous" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex - 1)} disabled={isPreviousImageButtonDisabled}>
+                <button className="image-button previous" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex - 1)} disabled={isPreviousImageButtonDisabled || isDetailsLoading}>
                     <ArrowBack />
                 </button>
 
                 {renderImageInfo()}
 
-                <button className="image-button next" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex + 1)} disabled={isNextImageButtonDisabled}>
+                <button className="image-button next" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex + 1)} disabled={isNextImageButtonDisabled || isDetailsLoading}>
                     <ArrowForward />
                 </button>
             </div>
 
-            {isDetailsLoading && <DetailsLoading />}
+            {isDetailsLoading && <SkeletonLoader width='400px' height='334px' borderRadius='0px'/>}
             {
             !isDetailsLoading &&             
             <div className="vehicle-info-container">

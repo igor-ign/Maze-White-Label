@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import { CircularProgress } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 import { BRAND_NAME } from '../../../../constants'
 import { useRequest } from '../../../../hooks'
-import { VehicleListResponse } from '../../../../interfaces'
-import './style.scss'
+import { SkeletonListUtilProps, VehicleListResponse } from '../../../../interfaces'
+import { getSkeletonLoaderList } from '../../../../utils'
 import { VehicleOverviewCard } from '../vehicle-overview-card'
-import { useNavigate } from 'react-router-dom'
+import './style.scss'
 
 export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
     const [ isListInViewport, setIsListInViewport] = useState<boolean>()
@@ -58,18 +58,34 @@ export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
         if (isListInViewport && vehicleList.length === 0) getVehicleOverviewList()
     }, [isListInViewport])
 
+    function renderVehicleListItems() {
+        if (isOverviewLoading) {
+            const skeletonListProperties: SkeletonListUtilProps = {
+                itemsWidth: '200px',
+                itemsHeight: '234px',
+                itemsBorderRadius: '5px',
+                amountOfSkeletonItems: 10
+            }
+
+            return getSkeletonLoaderList(skeletonListProperties)
+        }
+
+        return vehicleList.map(({ id, brand, image, model, price}) => {
+            return <VehicleOverviewCard id={id}  brand={brand} image={image} model={model} price={price} key={id}/>
+        })
+    }
+
     return <section className="vehicle-overview-container">
         <div className="vehicle-overview-content" id='vehicles'>
             <h1 className="overview-title">Some of the available {brandKeyword}s</h1>
 
             <ul className="vehicle-list" ref={carOverviewListRef}>
-                {isOverviewLoading && <li className="loading-container"><CircularProgress style={{ color: '#FFFFFF'}}/></li>}
-                {vehicleList.map(({ id, brand, image, model, price}) => {
-                    return <VehicleOverviewCard id={id}  brand={brand} image={image} model={model} price={price} key={id}/>
-                })}
+                {renderVehicleListItems()}
             </ul>
 
-            {!isOverviewLoading && <button className="more-button" onClick={() => navigate('/search')}>More</button>}
+            {!isOverviewLoading && 
+            <button className="more-button" onClick={() => navigate('/search')}>More</button>
+            }
         </div>
         </section>
 }

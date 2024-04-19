@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { CircularProgress } from "@mui/material";
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import { Header } from "../../components";
 import { BRAND_NAME } from "../../constants";
 import { useRequest } from "../../hooks";
-import { CarSearchFilters, MotorcycleSearchFilters, VehicleSearchResponse } from "../../interfaces";
+import { CarSearchFilters, MotorcycleSearchFilters, SkeletonListUtilProps, VehicleSearchResponse } from "../../interfaces";
+import { getSkeletonLoaderList } from "../../utils";
 import { FiltersModal, VehicleCard } from "./components";
 import { INITIAL_VEHICLE_SEARCH_FILTERS } from "./constants";
 import './style.scss'
@@ -42,6 +42,23 @@ export function Search() {
         getVehicleInformation()
     }, [filters.brand, filters.maxPrice, filters.minPrice, filters.year])
 
+    function renderVehicleListItem() {
+        if (isVehiclesLoading) {
+            const skeletonListProperties: SkeletonListUtilProps = {
+                itemsWidth: '280px',
+                itemsHeight: '300px',
+                itemsBorderRadius: '5px',
+                amountOfSkeletonItems: 12
+            }
+
+            return getSkeletonLoaderList(skeletonListProperties)
+        }
+
+        return vehicles?.map(({id, brand, model, price, year, image}) => {
+            return <VehicleCard id={id} brand={brand} model={model} price={price} year={year} image={image}/>
+        })
+    }
+
     return <div className="search-page-container">
         <Header />
 
@@ -58,10 +75,7 @@ export function Search() {
             </button>
             
             <ul className="vehicle-list">
-                {isVehiclesLoading && <li className="loading-container"><CircularProgress style={{ color: currentBrand === 'mazecar' ? '#F93E07' : '#3A3D8A'}}/></li>}
-                {vehicles?.map(({id, brand, model, price, year, image}) => {
-                    return <VehicleCard id={id} brand={brand} model={model} price={price} year={year} image={image}/>
-                })}
+                {renderVehicleListItem()}
             </ul>
         </main>
     </div>
