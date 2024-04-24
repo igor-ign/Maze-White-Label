@@ -59,3 +59,8 @@ export interface MotorcycleSearchFilters {
     minPrice?: number;
     maxPrice?: number;
 }
+
+export interface UserMessageRequest {
+    email: string;
+    message?: string;
+}

@@ -1,5 +1,13 @@
 import axios from "axios"
-import { CarDetailsResponse, CarSearchFilters, MotorcycleDetailsResponse, MotorcycleSearchFilters, VehicleListResponse, VehicleSearchResponse } from "../interfaces"
+import { 
+    CarDetailsResponse, 
+    CarSearchFilters, 
+    MotorcycleDetailsResponse, 
+    MotorcycleSearchFilters, 
+    UserMessageRequest, 
+    VehicleListResponse, 
+    VehicleSearchResponse
+} from "../interfaces"
 
 export function useRequest() {
     const baseUrl = 'http://localhost:3001'
@@ -58,6 +66,10 @@ export function useRequest() {
         return await axios.get<string[]>(`${baseUrl}/mazemotorcycle-years`)
     }
 
+    async function postUserMessage(body: UserMessageRequest) {
+        return await axios.post(`${baseUrl}/user-messages`, {...body})
+    }
+
     return {
         getCarOverview,
         getMotorcycleOverview,
@@ -68,6 +80,7 @@ export function useRequest() {
         getMazeCarBrands,
         getMazeCarYears,
         getMazeMotorcycleBrands,
-        getMazeMotorcycleYears
+        getMazeMotorcycleYears,
+        postUserMessage
     }
 }

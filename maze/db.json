@@ -1,728 +1,924 @@
 {
-    "car-overview": [
-        {
-            "id": 1,
-            "brand": "Volkswagen",
-            "image": "https://i.imgur.com/ZdtDPJL.png",
-            "model": "Golf",
-            "price": 30000
-        },
-        {
-            "id": 2,
-            "brand": "Volkswagen",
-            "image": "https://i.imgur.com/sTYadQ7.png",
-            "model": "Jetta",
-            "price": 45000
-        },
-        {
-            "id": 3,
-            "brand": "BMW",
-            "image": "https://i.imgur.com/yqEwU0N.png",
-            "model": "320i",
-            "price": 55000
-        },
-        {
-            "id": 4,
-            "brand": "Ford",
-            "image": "https://i.imgur.com/PLbuCoq.png",
-            "model": "F150",
-            "price": 40000
-        },
-        {
-            "id": 5,
-            "brand": "Jaguar",
-            "image": "https://i.imgur.com/uoq0vBU.png",
-            "model": "F-Type",
-            "price": 70000
-        },
-        {
-            "id": 6,
-            "brand": "Mercedes-Benz",
-            "image": "https://i.imgur.com/tkrw4Vq.png",
-            "model": "C180",
-            "price": 70000
-        },
-        {
-            "id": 7,
-            "brand": "Land Rover",
-            "image": "https://i.imgur.com/tpIC5eg.png",
-            "model": "Evoque",
-            "price": 50000
-        },
-        {
-            "id": 8,
-            "brand": "Nissan",
-            "image": "https://i.imgur.com/tc1Tjrh.png",
-            "model": "Versa",
-            "price": 30000
-        },
-        {
-            "id": 9,
-            "brand": "Volvo",
-            "image": "https://i.imgur.com/5vkZPtc.png",
-            "model": "XC60",
-            "price": 42000
-        },
-        {
-            "id": 10,
-            "brand": "Volvo",
-            "image": "https://i.imgur.com/rV3F2Qq.png",
-            "model": "XC90",
-            "price": 47000
-        }
-    ],
-    "motorcycle-overview": [
-        {
-            "id": 1,
-            "brand": "Kawasaki",
-            "image": "https://i.imgur.com/HoR0bYW.png",
-            "model": "Ninja",
-            "price": 10000
-        },
-        {
-            "id": 2,
-            "brand": "Ducatti",
-            "image": "https://i.imgur.com/271iPpR.png",
-            "model": "Panigale",
-            "price": 30000
-        },
-        {
-            "id": 3,
-            "brand": "Honda",
-            "image": "https://i.imgur.com/8ZrXDfM.png",
-            "model": "PCX",
-            "price": 12000
-        },
-        {
-            "id": 4,
-            "brand": "BMW",
-            "image": "https://i.imgur.com/VcJOVeh.png",
-            "model": "G310",
-            "price": 20000
-        },
-        {
-            "id": 5,
-            "brand": "BMW",
-            "image": "https://i.imgur.com/OIMSum8.png",
-            "model": "S1000",
-            "price": 30000
-        },
-        {
-            "id": 6,
-            "brand": "Suzuki",
-            "image": "https://i.imgur.com/qKgi9IV.png",
-            "model": "Hayabusa",
-            "price": 14000
-        },
-        {
-            "id": 7,
-            "brand": "Yamaha",
-            "image": "https://i.imgur.com/ySqeIrA.png",
-            "model": "MT-10",
-            "price": 16000
-        },
-        {
-            "id": 8,
-            "brand": "Yamaha",
-            "image": "https://i.imgur.com/Ep1wj85.png",
-            "model": "YZF-R1M",
-            "price": 30000
-        },
-        {
-            "id": 9,
-            "brand": "Yamaha",
-            "image": "https://i.imgur.com/bRck1tT.png",
-            "model": "Tracer 9 GT",
-            "price": 14000
-        },
-        {
-            "id": 10,
-            "brand": "Kawasaki",
-            "image": "https://i.imgur.com/u2Ijqky.png",
-            "model": "Z400",
-            "price": 7000
-        }
-    ],
-    "cars": [
-        {
-            "id": 1,
-            "brand": "Volkswagen",
-            "model": "Golf",
-            "images": ["https://i.imgur.com/2BLKK4K.jpg", "https://i.imgur.com/ZgxLOrx.jpg", "https://i.imgur.com/RYbDYTk.jpg", "https://i.imgur.com/PVVHeoN.jpg"],
-            "km": 100000,
-            "price": 30000,
-            "year": 2020,
-            "tranmission": "AUTOMATIC",
-            "color": "White",
-            "fuel": "Gasoline"
-        },
-        {
-            "id": 2,
-            "brand": "Volkswagen",
-            "model": "Jetta",
-            "images": ["https://i.imgur.com/pzJtvrf.jpg", "https://i.imgur.com/IlsP8rt.jpg", "https://i.imgur.com/rD8BDFp.jpg", "https://i.imgur.com/Iz4LVGW.jpg"],
-            "km": "10000",
-            "price": 45000,
-            "year": 2017,
-            "tranmission": "AUTOMATIC",
-            "color": "Blue",
-            "fuel": "Gasoline"
-        },
-        {
-            "id": 3,
-            "brand": "BMW",
-            "model": "320i",
-            "images": ["https://i.imgur.com/u9oZEih.jpg", "https://i.imgur.com/V3zXNVR.jpg", "https://i.imgur.com/baguZPq.jpg"],
-            "km": 30000,
-            "price": 55000,
-            "year": 2022,
-            "tranmission": "MANUAL",
-            "color": "Black",
-            "fuel": "Gasoline"
-        },
-        {
-            "id": 4,
-            "brand": "Ford",
-            "model": "F150",
-            "images": ["https://i.imgur.com/smzHe2u.jpg", "https://i.imgur.com/N7Yiw1a.jpg", "https://i.imgur.com/xwUmSnZ.jpg", "https://i.imgur.com/Uz5R4F8.jpg"],
-            "km": 50000,
-            "price": 40000,
-            "year": 2023,
-            "tranmission": "AUTOMATIC",
-            "color": "White",
-            "fuel": "Diesel"
-        },
-        {
-            "id": 5,
-            "brand": "Jaguar",
-            "model": "F-Type",
-            "images": ["https://i.imgur.com/VBtI4lw.jpg", "https://i.imgur.com/j47csOq.jpg", "https://i.imgur.com/Ap04kLj.jpg", "https://i.imgur.com/BPRgqa6.jpg"],
-            "km": 10000,
-            "price": 70000,
-            "year": 2023,
-            "tranmission": "AUTOMATIC",
-            "color": "Red",
-            "fuel": "Gasoline"
-        },
-        {
-            "id": 6,
-            "brand": "Mercedes-Benz",
-            "model": "C180",
-            "images": ["https://i.imgur.com/FCsZC16.jpg", "https://i.imgur.com/vmfN1KB.jpg", "https://i.imgur.com/7NLsBEI.png"],
-            "km": 10000,
-            "price": 70000,
-            "year": 2018,
-            "tranmission": "AUTOMATIC",
-            "color": "Grey",
-            "fuel": "Gasoline"
-        },
-        {
-            "id": 7,
-            "brand": "Land Rover",
-            "model": "Evoque",
-            "images": ["https://i.imgur.com/5uVdS6t.jpg", "https://i.imgur.com/RSzDkk8.jpg", "https://i.imgur.com/dNpwld5.jpg", "https://i.imgur.com/aCw9l49.jpg", "https://i.imgur.com/TBvU3yN.jpg"],
-            "km": 5000,
-            "price": 50000,
-            "year": 2016,
-            "tranmission": "AUTOMATIC",
-            "color": "Red",
-            "fuel": "Gasoline"
-        },
-        {
-            "id": 8,
-            "brand": "Nissan",
-            "model": "Versa",
-            "images": ["https://i.imgur.com/emXCkop.jpg", "https://i.imgur.com/n45G66i.jpg", "https://i.imgur.com/boGQnZo.jpg", "https://i.imgur.com/0ik6yyO.jpg"],
-            "km": 70000,
-            "price": 30000,
-            "year": 2020,
-            "tranmission": "AUTOMATIC",
-            "color": "Silver",
-            "fuel": "Gasoline"
-        },
-        {
-            "id": 9,
-            "brand": "Volvo",
-            "model": "XC60",
-            "images": ["https://i.imgur.com/1SjmYMz.jpg", "https://i.imgur.com/jFMLQq1.jpg", "https://i.imgur.com/0SB4anV.jpg", "https://i.imgur.com/QjHdbbr.jpg"],
-            "km": 10000,
-            "price": 42000,
-            "year": 2020,
-            "tranmission": "AUTOMATIC",
-            "color": "Silver",
-            "fuel": "Gasoline"
-        },
-        {
-            "id": 10,
-            "brand": "Volvo",
-            "model": "XC90",
-            "images": ["https://i.imgur.com/MxzEfRI.jpg", "https://i.imgur.com/uQZsQ0c.jpg", "https://i.imgur.com/xy2uneo.jpg", "https://i.imgur.com/K0DcRqN.jpg"],
-            "km": 20000,
-            "price": 47000,
-            "year": 2021,
-            "tranmission": "AUTOMATIC",
-            "color": "Black",
-            "fuel": "Diesel"
-        },
-        {
-            "id": 11,
-            "brand": "Alfa Romeo",
-            "model": "Stelvio",
-            "images": ["https://i.imgur.com/lTdYqWr.jpg", "https://i.imgur.com/xXqWyTf.jpeg", "https://i.imgur.com/nqHKwLB.jpeg"],
-            "km": 10000,
-            "price": 45000,
-            "year": 2022,
-            "tranmission": "AUTOMATIC",
-            "color": "Red",
-            "fuel": "Gasoline"
-        },
-        {
-            "id": 12,
-            "brand": "Alfa Romeo",
-            "model": "Giulia Quadrifoglio",
-            "images": ["https://i.imgur.com/YETQxVw.jpeg", "https://i.imgur.com/eUyS4ZM.jpeg", "https://i.imgur.com/M3QPPdn.jpeg"],
-            "km": 0,
-            "price": 45000,
-            "year": 2023,
-            "tranmission": "AUTOMATIC",
-            "color": "Green",
-            "fuel": "Gasoline"
-        },
-        {
-            "id": 13,
-            "brand": "BMW",
-            "model": "M3",
-            "images": ["https://i.imgur.com/3FAM8Vl.jpeg", "https://i.imgur.com/3bEiSZW.jpeg"],
-            "km": 0,
-            "price": 80000,
-            "year": 2023,
-            "tranmission": "AUTOMATIC",
-            "color": "Grey",
-            "fuel": "Gasoline"
-        },
-        {
-            "id": 14,
-            "brand": "BMW",
-            "model": "X6",
-            "images": ["https://i.imgur.com/oFxxYP4.jpeg", "https://i.imgur.com/oijlJCO.jpeg", "https://i.imgur.com/JRLgdgA.jpeg"],
-            "km": 0,
-            "price": 60000,
-            "year": 2023,
-            "tranmission": "AUTOMATIC",
-            "color": "Black",
-            "fuel": "Gasoline"
-        },
-        {
-            "id": 15,
-            "brand": "Nissan",
-            "model": "Kicks",
-            "images": ["https://i.imgur.com/Otstjpl.jpeg", "https://i.imgur.com/4K9VoeX.jpeg", "https://i.imgur.com/iwRXmhs.jpeg"],
-            "km": 0,
-            "price": 30000,
-            "year": 2023,
-            "tranmission": "AUTOMATIC",
-            "color": "White",
-            "fuel": "Gasoline"
-        }
-    ],
-    "motorcycles": [
-        {
-            "id": 1,
-            "brand": "Kawasaki",
-            "model": "Ninja",
-            "images": ["https://i.imgur.com/iUECAdf.jpg", "https://i.imgur.com/uS9Viq7.jpg"],
-            "km": 10000,
-            "price": 10000,
-            "year": 2020,
-            "color": "Green"
-        },
-        {
-            "id": 2,
-            "brand": "Ducatti",
-            "model": "Panigale",
-            "images": ["https://i.imgur.com/zxgFSES.jpg"],
-            "km": 5000,
-            "price": 30000,
-            "year": 2022,
-            "color": "Red"
-        },
-        {
-            "id": 3,
-            "brand": "Honda",
-            "model": "PCX",
-            "images": ["https://i.imgur.com/lHkvNA8.jpg", "https://i.imgur.com/tQD330i.jpg"],
-            "km": 20000,
-            "price": 12000,
-            "year": 2017,
-            "color": "White"
-        },
-        {
-            "id": 4,
-            "brand": "BMW",
-            "model": "G310",
-            "images": ["https://i.imgur.com/8TlSwpR.jpg", "https://i.imgur.com/egMSD61.jpg"],
-            "km": 5000,
-            "price": 20000,
-            "year": 2023,
-            "color": "White"
-        },
-        {
-            "id": 5,
-            "brand": "BMW",
-            "model": "S1000",
-            "images": ["https://i.imgur.com/Qqurc1F.jpg", "https://i.imgur.com/gs0LNVK.jpg"],
-            "km": 0,
-            "price": 30000,
-            "year": 2023,
-            "color": "White"
-        },
-        {
-            "id": 6,
-            "brand": "Suzuki",
-            "model": "Hayabusa",
-            "images": ["https://i.imgur.com/5WkRqO1.jpg", "https://i.imgur.com/AzYd0Iw.jpg"],
-            "km": 12000,
-            "price": 14000,
-            "year": 2023,
-            "color": "Black"
-        },
-        {
-            "id": 7,
-            "brand": "Yamaha",
-            "model": "MT-10",
-            "images": ["https://i.imgur.com/UpFLKro.jpg", "https://i.imgur.com/nbq6lMD.jpg"],
-            "km": 7000,
-            "price": 16000,
-            "year": 2018,
-            "color": "Black"
-        },
-        {
-            "id": 8,
-            "brand": "Yamaha",
-            "model": "YZF-R1M",
-            "images": ["https://i.imgur.com/PqGxe7a.jpg", "https://i.imgur.com/b2ZgrnL.jpg"],
-            "km": 0,
-            "price": 30000,
-            "year": 2023,
-            "color": "Black"
-        },
-        {
-            "id": 9,
-            "brand": "Yamaha",
-            "model": "Tracer 9 GT",
-            "images": ["https://i.imgur.com/YVaih66.jpg", "https://i.imgur.com/XXfV9N7.jpg"],
-            "km": 20000,
-            "price": 14000,
-            "year": 2020,
-            "color": "Red"
-        },
-        {
-            "id": 10,
-            "brand": "Kawasaki",
-            "model": "Z400",
-            "images": ["https://i.imgur.com/W0qFMMX.jpg", "https://i.imgur.com/8THJeB0.jpg"],
-            "km": 40000,
-            "price": 7000,
-            "year": 2023,
-            "color": "Green"
-        },
-        {
-            "id": 11,
-            "brand": "Kawasaki",
-            "model": "Vulcan",
-            "images": ["https://i.imgur.com/qpehE8q.jpeg", "https://i.imgur.com/FLfkbIA.jpeg"],
-            "km": 0,
-            "price": 9000,
-            "year": 2023,
-            "color": "Green"
-        },
-        {
-            "id": 12,
-            "brand": "Kawasaki",
-            "model": "Versys 1000",
-            "images": ["https://i.imgur.com/R4458hj.jpeg", "https://i.imgur.com/o3T23GA.jpeg", "https://i.imgur.com/Fd85zsP.jpeg"],
-            "km": 0,
-            "price": 18000,
-            "year": 2023,
-            "color": "Green"
-        },
-        {
-            "id": 13,
-            "brand": "Suzuki",
-            "model": "GSX-S1000 GT",
-            "images": ["https://i.imgur.com/ikcPN81.jpeg", "https://i.imgur.com/zY1Hn1X.jpg"],
-            "km": 0,
-            "price": 18000,
-            "year": 2023,
-            "color": "Blue"
-        },
-        {
-            "id": 14,
-            "brand": "Honda",
-            "model": "CB 1000R",
-            "images": ["https://i.imgur.com/aXipG47.jpeg", "https://i.imgur.com/9bhrn37.jpeg"],
-            "km": 10000,
-            "price": 8000,
-            "year": 2023,
-            "color": "Red"
-        },
-        {
-            "id": 15,
-            "brand": "Honda",
-            "model": "NC 750X",
-            "images": ["https://i.imgur.com/JyHVVAy.jpg", "https://i.imgur.com/lQhPMQM.jpg"],
-            "km": 0,
-            "price": 8000,
-            "year": 2023,
-            "color": "Red"
-        }
-    ],
-    "car-search": [
-        {
-            "id": 1,
-            "brand": "Volkswagen",
-            "model": "Golf",
-            "image": "https://i.imgur.com/5hePVIr.jpeg",
-            "price": 30000,
-            "year": 2020
-        },
-        {
-            "id": 2,
-            "brand": "Volkswagen",
-            "model": "Jetta",
-            "image": "https://i.imgur.com/v7bec6j.jpeg",
-            "price": 45000,
-            "year": 2017
-        },
-        {
-            "id": 3,
-            "brand": "BMW",
-            "model": "320i",
-            "image": "https://i.imgur.com/MWIkUMk.jpeg",
-            "price": 55000,
-            "year": 2022
-        },
-        {
-            "id": 4,
-            "brand": "Ford",
-            "model": "F150",
-            "image": "https://i.imgur.com/kgTh4Ep.jpeg",
-            "price": 40000,
-            "year": 2023
-        },
-        {
-            "id": 5,
-            "brand": "Jaguar",
-            "model": "F-Type",
-            "image": "https://i.imgur.com/dILt6E7.jpeg",
-            "price": 70000,
-            "year": 2023
-        },
-        {
-            "id": 6,
-            "brand": "Mercedes-Benz",
-            "model": "C180",
-            "image": "https://i.imgur.com/UaCPNaJ.jpeg",
-            "price": 70000,
-            "year": 2018
-        },
-        {
-            "id": 7,
-            "brand": "Land Rover",
-            "model": "Evoque",
-            "image": "https://i.imgur.com/IFczApC.jpeg",
-            "price": 50000,
-            "year": 2016
-        },
-        {
-            "id": 8,
-            "brand": "Nissan",
-            "model": "Versa",
-            "image": "https://i.imgur.com/Ci9c0t8.jpeg",
-            "price": 30000,
-            "year": 2020
-        },
-        {
-            "id": 9,
-            "brand": "Volvo",
-            "model": "XC60",
-            "image": "https://i.imgur.com/7a2AWdW.jpeg",
-            "price": 42000,
-            "year": 2020
-        },
-        {
-            "id": 10,
-            "brand": "Volvo",
-            "model": "XC90",
-            "image": "https://i.imgur.com/GSyBCfw.jpeg",
-            "price": 47000,
-            "year": 2021
-        },
-        {
-            "id": 11,
-            "brand": "Alfa Romeo",
-            "model": "Stelvio",
-            "image": "https://i.imgur.com/RThaOmL.jpeg",
-            "price": 45000,
-            "year": 2022
-        },
-        {
-            "id": 12,
-            "brand": "Alfa Romeo",
-            "model": "Giulia Quadrifoglio",
-            "image": "https://i.imgur.com/RkgULYQ.jpeg",
-            "price": 45000,
-            "year": 2023
-        },
-        {
-            "id": 13,
-            "brand": "BMW",
-            "model": "M3",
-            "image": "https://i.imgur.com/qqRaWHE.jpeg",
-            "price": 60000,
-            "year": 2023
-        },
-        {
-            "id": 14,
-            "brand": "BMW",
-            "model": "X6",
-            "image": "https://i.imgur.com/z5IsQza.jpeg",
-            "price": 60000,
-            "year": 2023
-        },
-        {
-            "id": 15,
-            "brand": "Nissan",
-            "model": "Kicks",
-            "image": "https://i.imgur.com/MdR4d2C.jpg",
-            "price": 30000,
-            "year": 2023
-        }
-    ],
-    "motorcycle-search": [
-        {
-            "id": 1,
-            "brand": "Kawasaki",
-            "model": "Ninja",
-            "image": "https://i.imgur.com/Tjznc8l.jpeg",
-            "price": 10000,
-            "year": 2020
-        },
-        {
-            "id": 2,
-            "brand": "Ducatti",
-            "model": "Panigale",
-            "image": "https://i.imgur.com/AB6QxD3.jpg",
-            "price": 30000,
-            "year": 2022
-        },
-        {
-            "id": 3,
-            "brand": "Honda",
-            "model": "PCX",
-            "image": "https://i.imgur.com/Uc0YpGr.jpeg",
-            "price": 12000,
-            "year": 2017
-        },
-        {
-            "id": 4,
-            "brand": "BMW",
-            "model": "G310",
-            "image": "https://i.imgur.com/nMmPwGB.jpeg",
-            "price": 20000,
-            "year": 2023
-        },
-        {
-            "id": 5,
-            "brand": "BMW",
-            "model": "S1000",
-            "image": "https://i.imgur.com/79RGn2M.jpg",
-            "price": 30000,
-            "year": 2023
-        },
-        {
-            "id": 6,
-            "brand": "Suzuki",
-            "model": "Hayabusa",
-            "image": "https://i.imgur.com/0hjLkie.jpeg",
-            "price": 14000,
-            "year": 2023
-        },
-        {
-            "id": 7,
-            "brand": "Yamaha",
-            "model": "MT-10",
-            "image": "https://i.imgur.com/Ch9lPSV.jpeg",
-            "price": 16000,
-            "year": 2018
-        },
-        {
-            "id": 8,
-            "brand": "Yamaha",
-            "model": "YZF-R1M",
-            "image": "https://i.imgur.com/2RZGKRc.jpeg",
-            "price": 30000,
-            "year": 2023
-        },
-        {
-            "id": 9,
-            "brand": "Yamaha",
-            "model": "Tracer 9 GT",
-            "image": "https://i.imgur.com/VWkD4GQ.jpeg",
-            "price": 14000,
-            "year": 2020
-        },
-        {
-            "id": 10,
-            "brand": "Kawasaki",
-            "model": "Z400",
-            "image": "https://i.imgur.com/F6efY5h.jpeg",
-            "price": 7000,
-            "year": 2023
-        },
-        {
-            "id": 11,
-            "brand": "Kawasaki",
-            "model": "Vulcan",
-            "image": "https://i.imgur.com/6TaGzub.jpeg",
-            "price": 9000,
-            "year": 2023
-        },
-        {
-            "id": 12,
-            "brand": "Kawasaki",
-            "model": "Versys 1000",
-            "image": "https://i.imgur.com/Xhjh5Mc.jpeg",
-            "price": 18000,
-            "year": 2023
-        },
-        {
-            "id": 13,
-            "brand": "Suzuki",
-            "model": "GSX-S1000 GT",
-            "images": "https://i.imgur.com/DXVr5NU.jpeg",
-            "price": 18000,
-            "year": 2023
-        },
-        {
-            "id": 14,
-            "brand": "Honda",
-            "model": "CB 1000R",
-            "image": "https://i.imgur.com/X2RUs5T.jpeg",
-            "price": 8000,
-            "year": 2023
-        },
-        {
-            "id": 15,
-            "brand": "Honda",
-            "model": "NC 750X",
-            "image": "https://i.imgur.com/IfQhsZc.jpeg",
-            "price": 8000,
-            "year": 2023
-        }
-    ],
-    "mazecar-brands": ["Alfa Romeo", "BMW", "Ford", "Jaguar", "Mercedes-Benz", "Nissan", "Volvo", "Land Rover", "Volkswagen"],
-    "mazecar-years": ["2023", "2022", "2021", "2020", "2018", "2017", "2016"],
-    "mazemotorcycle-brands": ["Honda", "BMW", "Ducatti", "Kawasaki", "Suzuki", "Yamaha"],
-    "mazemotorcycle-years": ["2023", "2022", "2020", "2018", "2017"]
+  "car-overview": [
+    {
+      "id": 1,
+      "brand": "Volkswagen",
+      "image": "https://i.imgur.com/ZdtDPJL.png",
+      "model": "Golf",
+      "price": 30000
+    },
+    {
+      "id": 2,
+      "brand": "Volkswagen",
+      "image": "https://i.imgur.com/sTYadQ7.png",
+      "model": "Jetta",
+      "price": 45000
+    },
+    {
+      "id": 3,
+      "brand": "BMW",
+      "image": "https://i.imgur.com/yqEwU0N.png",
+      "model": "320i",
+      "price": 55000
+    },
+    {
+      "id": 4,
+      "brand": "Ford",
+      "image": "https://i.imgur.com/PLbuCoq.png",
+      "model": "F150",
+      "price": 40000
+    },
+    {
+      "id": 5,
+      "brand": "Jaguar",
+      "image": "https://i.imgur.com/uoq0vBU.png",
+      "model": "F-Type",
+      "price": 70000
+    },
+    {
+      "id": 6,
+      "brand": "Mercedes-Benz",
+      "image": "https://i.imgur.com/tkrw4Vq.png",
+      "model": "C180",
+      "price": 70000
+    },
+    {
+      "id": 7,
+      "brand": "Land Rover",
+      "image": "https://i.imgur.com/tpIC5eg.png",
+      "model": "Evoque",
+      "price": 50000
+    },
+    {
+      "id": 8,
+      "brand": "Nissan",
+      "image": "https://i.imgur.com/tc1Tjrh.png",
+      "model": "Versa",
+      "price": 30000
+    },
+    {
+      "id": 9,
+      "brand": "Volvo",
+      "image": "https://i.imgur.com/5vkZPtc.png",
+      "model": "XC60",
+      "price": 42000
+    },
+    {
+      "id": 10,
+      "brand": "Volvo",
+      "image": "https://i.imgur.com/rV3F2Qq.png",
+      "model": "XC90",
+      "price": 47000
+    }
+  ],
+  "motorcycle-overview": [
+    {
+      "id": 1,
+      "brand": "Kawasaki",
+      "image": "https://i.imgur.com/HoR0bYW.png",
+      "model": "Ninja",
+      "price": 10000
+    },
+    {
+      "id": 2,
+      "brand": "Ducatti",
+      "image": "https://i.imgur.com/271iPpR.png",
+      "model": "Panigale",
+      "price": 30000
+    },
+    {
+      "id": 3,
+      "brand": "Honda",
+      "image": "https://i.imgur.com/8ZrXDfM.png",
+      "model": "PCX",
+      "price": 12000
+    },
+    {
+      "id": 4,
+      "brand": "BMW",
+      "image": "https://i.imgur.com/VcJOVeh.png",
+      "model": "G310",
+      "price": 20000
+    },
+    {
+      "id": 5,
+      "brand": "BMW",
+      "image": "https://i.imgur.com/OIMSum8.png",
+      "model": "S1000",
+      "price": 30000
+    },
+    {
+      "id": 6,
+      "brand": "Suzuki",
+      "image": "https://i.imgur.com/qKgi9IV.png",
+      "model": "Hayabusa",
+      "price": 14000
+    },
+    {
+      "id": 7,
+      "brand": "Yamaha",
+      "image": "https://i.imgur.com/ySqeIrA.png",
+      "model": "MT-10",
+      "price": 16000
+    },
+    {
+      "id": 8,
+      "brand": "Yamaha",
+      "image": "https://i.imgur.com/Ep1wj85.png",
+      "model": "YZF-R1M",
+      "price": 30000
+    },
+    {
+      "id": 9,
+      "brand": "Yamaha",
+      "image": "https://i.imgur.com/bRck1tT.png",
+      "model": "Tracer 9 GT",
+      "price": 14000
+    },
+    {
+      "id": 10,
+      "brand": "Kawasaki",
+      "image": "https://i.imgur.com/u2Ijqky.png",
+      "model": "Z400",
+      "price": 7000
+    }
+  ],
+  "cars": [
+    {
+      "id": 1,
+      "brand": "Volkswagen",
+      "model": "Golf",
+      "images": [
+        "https://i.imgur.com/2BLKK4K.jpg",
+        "https://i.imgur.com/ZgxLOrx.jpg",
+        "https://i.imgur.com/RYbDYTk.jpg",
+        "https://i.imgur.com/PVVHeoN.jpg"
+      ],
+      "km": 100000,
+      "price": 30000,
+      "year": 2020,
+      "tranmission": "AUTOMATIC",
+      "color": "White",
+      "fuel": "Gasoline"
+    },
+    {
+      "id": 2,
+      "brand": "Volkswagen",
+      "model": "Jetta",
+      "images": [
+        "https://i.imgur.com/pzJtvrf.jpg",
+        "https://i.imgur.com/IlsP8rt.jpg",
+        "https://i.imgur.com/rD8BDFp.jpg",
+        "https://i.imgur.com/Iz4LVGW.jpg"
+      ],
+      "km": "10000",
+      "price": 45000,
+      "year": 2017,
+      "tranmission": "AUTOMATIC",
+      "color": "Blue",
+      "fuel": "Gasoline"
+    },
+    {
+      "id": 3,
+      "brand": "BMW",
+      "model": "320i",
+      "images": [
+        "https://i.imgur.com/u9oZEih.jpg",
+        "https://i.imgur.com/V3zXNVR.jpg",
+        "https://i.imgur.com/baguZPq.jpg"
+      ],
+      "km": 30000,
+      "price": 55000,
+      "year": 2022,
+      "tranmission": "MANUAL",
+      "color": "Black",
+      "fuel": "Gasoline"
+    },
+    {
+      "id": 4,
+      "brand": "Ford",
+      "model": "F150",
+      "images": [
+        "https://i.imgur.com/smzHe2u.jpg",
+        "https://i.imgur.com/N7Yiw1a.jpg",
+        "https://i.imgur.com/xwUmSnZ.jpg",
+        "https://i.imgur.com/Uz5R4F8.jpg"
+      ],
+      "km": 50000,
+      "price": 40000,
+      "year": 2023,
+      "tranmission": "AUTOMATIC",
+      "color": "White",
+      "fuel": "Diesel"
+    },
+    {
+      "id": 5,
+      "brand": "Jaguar",
+      "model": "F-Type",
+      "images": [
+        "https://i.imgur.com/VBtI4lw.jpg",
+        "https://i.imgur.com/j47csOq.jpg",
+        "https://i.imgur.com/Ap04kLj.jpg",
+        "https://i.imgur.com/BPRgqa6.jpg"
+      ],
+      "km": 10000,
+      "price": 70000,
+      "year": 2023,
+      "tranmission": "AUTOMATIC",
+      "color": "Red",
+      "fuel": "Gasoline"
+    },
+    {
+      "id": 6,
+      "brand": "Mercedes-Benz",
+      "model": "C180",
+      "images": [
+        "https://i.imgur.com/FCsZC16.jpg",
+        "https://i.imgur.com/vmfN1KB.jpg",
+        "https://i.imgur.com/7NLsBEI.png"
+      ],
+      "km": 10000,
+      "price": 70000,
+      "year": 2018,
+      "tranmission": "AUTOMATIC",
+      "color": "Grey",
+      "fuel": "Gasoline"
+    },
+    {
+      "id": 7,
+      "brand": "Land Rover",
+      "model": "Evoque",
+      "images": [
+        "https://i.imgur.com/5uVdS6t.jpg",
+        "https://i.imgur.com/RSzDkk8.jpg",
+        "https://i.imgur.com/dNpwld5.jpg",
+        "https://i.imgur.com/aCw9l49.jpg",
+        "https://i.imgur.com/TBvU3yN.jpg"
+      ],
+      "km": 5000,
+      "price": 50000,
+      "year": 2016,
+      "tranmission": "AUTOMATIC",
+      "color": "Red",
+      "fuel": "Gasoline"
+    },
+    {
+      "id": 8,
+      "brand": "Nissan",
+      "model": "Versa",
+      "images": [
+        "https://i.imgur.com/emXCkop.jpg",
+        "https://i.imgur.com/n45G66i.jpg",
+        "https://i.imgur.com/boGQnZo.jpg",
+        "https://i.imgur.com/0ik6yyO.jpg"
+      ],
+      "km": 70000,
+      "price": 30000,
+      "year": 2020,
+      "tranmission": "AUTOMATIC",
+      "color": "Silver",
+      "fuel": "Gasoline"
+    },
+    {
+      "id": 9,
+      "brand": "Volvo",
+      "model": "XC60",
+      "images": [
+        "https://i.imgur.com/1SjmYMz.jpg",
+        "https://i.imgur.com/jFMLQq1.jpg",
+        "https://i.imgur.com/0SB4anV.jpg",
+        "https://i.imgur.com/QjHdbbr.jpg"
+      ],
+      "km": 10000,
+      "price": 42000,
+      "year": 2020,
+      "tranmission": "AUTOMATIC",
+      "color": "Silver",
+      "fuel": "Gasoline"
+    },
+    {
+      "id": 10,
+      "brand": "Volvo",
+      "model": "XC90",
+      "images": [
+        "https://i.imgur.com/MxzEfRI.jpg",
+        "https://i.imgur.com/uQZsQ0c.jpg",
+        "https://i.imgur.com/xy2uneo.jpg",
+        "https://i.imgur.com/K0DcRqN.jpg"
+      ],
+      "km": 20000,
+      "price": 47000,
+      "year": 2021,
+      "tranmission": "AUTOMATIC",
+      "color": "Black",
+      "fuel": "Diesel"
+    },
+    {
+      "id": 11,
+      "brand": "Alfa Romeo",
+      "model": "Stelvio",
+      "images": [
+        "https://i.imgur.com/lTdYqWr.jpg",
+        "https://i.imgur.com/xXqWyTf.jpeg",
+        "https://i.imgur.com/nqHKwLB.jpeg"
+      ],
+      "km": 10000,
+      "price": 45000,
+      "year": 2022,
+      "tranmission": "AUTOMATIC",
+      "color": "Red",
+      "fuel": "Gasoline"
+    },
+    {
+      "id": 12,
+      "brand": "Alfa Romeo",
+      "model": "Giulia Quadrifoglio",
+      "images": [
+        "https://i.imgur.com/YETQxVw.jpeg",
+        "https://i.imgur.com/eUyS4ZM.jpeg",
+        "https://i.imgur.com/M3QPPdn.jpeg"
+      ],
+      "km": 0,
+      "price": 45000,
+      "year": 2023,
+      "tranmission": "AUTOMATIC",
+      "color": "Green",
+      "fuel": "Gasoline"
+    },
+    {
+      "id": 13,
+      "brand": "BMW",
+      "model": "M3",
+      "images": [
+        "https://i.imgur.com/3FAM8Vl.jpeg",
+        "https://i.imgur.com/3bEiSZW.jpeg"
+      ],
+      "km": 0,
+      "price": 80000,
+      "year": 2023,
+      "tranmission": "AUTOMATIC",
+      "color": "Grey",
+      "fuel": "Gasoline"
+    },
+    {
+      "id": 14,
+      "brand": "BMW",
+      "model": "X6",
+      "images": [
+        "https://i.imgur.com/oFxxYP4.jpeg",
+        "https://i.imgur.com/oijlJCO.jpeg",
+        "https://i.imgur.com/JRLgdgA.jpeg"
+      ],
+      "km": 0,
+      "price": 60000,
+      "year": 2023,
+      "tranmission": "AUTOMATIC",
+      "color": "Black",
+      "fuel": "Gasoline"
+    },
+    {
+      "id": 15,
+      "brand": "Nissan",
+      "model": "Kicks",
+      "images": [
+        "https://i.imgur.com/Otstjpl.jpeg",
+        "https://i.imgur.com/4K9VoeX.jpeg",
+        "https://i.imgur.com/iwRXmhs.jpeg"
+      ],
+      "km": 0,
+      "price": 30000,
+      "year": 2023,
+      "tranmission": "AUTOMATIC",
+      "color": "White",
+      "fuel": "Gasoline"
+    }
+  ],
+  "motorcycles": [
+    {
+      "id": 1,
+      "brand": "Kawasaki",
+      "model": "Ninja",
+      "images": [
+        "https://i.imgur.com/iUECAdf.jpg",
+        "https://i.imgur.com/uS9Viq7.jpg"
+      ],
+      "km": 10000,
+      "price": 10000,
+      "year": 2020,
+      "color": "Green"
+    },
+    {
+      "id": 2,
+      "brand": "Ducatti",
+      "model": "Panigale",
+      "images": [
+        "https://i.imgur.com/zxgFSES.jpg"
+      ],
+      "km": 5000,
+      "price": 30000,
+      "year": 2022,
+      "color": "Red"
+    },
+    {
+      "id": 3,
+      "brand": "Honda",
+      "model": "PCX",
+      "images": [
+        "https://i.imgur.com/lHkvNA8.jpg",
+        "https://i.imgur.com/tQD330i.jpg"
+      ],
+      "km": 20000,
+      "price": 12000,
+      "year": 2017,
+      "color": "White"
+    },
+    {
+      "id": 4,
+      "brand": "BMW",
+      "model": "G310",
+      "images": [
+        "https://i.imgur.com/8TlSwpR.jpg",
+        "https://i.imgur.com/egMSD61.jpg"
+      ],
+      "km": 5000,
+      "price": 20000,
+      "year": 2023,
+      "color": "White"
+    },
+    {
+      "id": 5,
+      "brand": "BMW",
+      "model": "S1000",
+      "images": [
+        "https://i.imgur.com/Qqurc1F.jpg",
+        "https://i.imgur.com/gs0LNVK.jpg"
+      ],
+      "km": 0,
+      "price": 30000,
+      "year": 2023,
+      "color": "White"
+    },
+    {
+      "id": 6,
+      "brand": "Suzuki",
+      "model": "Hayabusa",
+      "images": [
+        "https://i.imgur.com/5WkRqO1.jpg",
+        "https://i.imgur.com/AzYd0Iw.jpg"
+      ],
+      "km": 12000,
+      "price": 14000,
+      "year": 2023,
+      "color": "Black"
+    },
+    {
+      "id": 7,
+      "brand": "Yamaha",
+      "model": "MT-10",
+      "images": [
+        "https://i.imgur.com/UpFLKro.jpg",
+        "https://i.imgur.com/nbq6lMD.jpg"
+      ],
+      "km": 7000,
+      "price": 16000,
+      "year": 2018,
+      "color": "Black"
+    },
+    {
+      "id": 8,
+      "brand": "Yamaha",
+      "model": "YZF-R1M",
+      "images": [
+        "https://i.imgur.com/PqGxe7a.jpg",
+        "https://i.imgur.com/b2ZgrnL.jpg"
+      ],
+      "km": 0,
+      "price": 30000,
+      "year": 2023,
+      "color": "Black"
+    },
+    {
+      "id": 9,
+      "brand": "Yamaha",
+      "model": "Tracer 9 GT",
+      "images": [
+        "https://i.imgur.com/YVaih66.jpg",
+        "https://i.imgur.com/XXfV9N7.jpg"
+      ],
+      "km": 20000,
+      "price": 14000,
+      "year": 2020,
+      "color": "Red"
+    },
+    {
+      "id": 10,
+      "brand": "Kawasaki",
+      "model": "Z400",
+      "images": [
+        "https://i.imgur.com/W0qFMMX.jpg",
+        "https://i.imgur.com/8THJeB0.jpg"
+      ],
+      "km": 40000,
+      "price": 7000,
+      "year": 2023,
+      "color": "Green"
+    },
+    {
+      "id": 11,
+      "brand": "Kawasaki",
+      "model": "Vulcan",
+      "images": [
+        "https://i.imgur.com/qpehE8q.jpeg",
+        "https://i.imgur.com/FLfkbIA.jpeg"
+      ],
+      "km": 0,
+      "price": 9000,
+      "year": 2023,
+      "color": "Green"
+    },
+    {
+      "id": 12,
+      "brand": "Kawasaki",
+      "model": "Versys 1000",
+      "images": [
+        "https://i.imgur.com/R4458hj.jpeg",
+        "https://i.imgur.com/o3T23GA.jpeg",
+        "https://i.imgur.com/Fd85zsP.jpeg"
+      ],
+      "km": 0,
+      "price": 18000,
+      "year": 2023,
+      "color": "Green"
+    },
+    {
+      "id": 13,
+      "brand": "Suzuki",
+      "model": "GSX-S1000 GT",
+      "images": [
+        "https://i.imgur.com/ikcPN81.jpeg",
+        "https://i.imgur.com/zY1Hn1X.jpg"
+      ],
+      "km": 0,
+      "price": 18000,
+      "year": 2023,
+      "color": "Blue"
+    },
+    {
+      "id": 14,
+      "brand": "Honda",
+      "model": "CB 1000R",
+      "images": [
+        "https://i.imgur.com/aXipG47.jpeg",
+        "https://i.imgur.com/9bhrn37.jpeg"
+      ],
+      "km": 10000,
+      "price": 8000,
+      "year": 2023,
+      "color": "Red"
+    },
+    {
+      "id": 15,
+      "brand": "Honda",
+      "model": "NC 750X",
+      "images": [
+        "https://i.imgur.com/JyHVVAy.jpg",
+        "https://i.imgur.com/lQhPMQM.jpg"
+      ],
+      "km": 0,
+      "price": 8000,
+      "year": 2023,
+      "color": "Red"
+    }
+  ],
+  "car-search": [
+    {
+      "id": 1,
+      "brand": "Volkswagen",
+      "model": "Golf",
+      "image": "https://i.imgur.com/5hePVIr.jpeg",
+      "price": 30000,
+      "year": 2020
+    },
+    {
+      "id": 2,
+      "brand": "Volkswagen",
+      "model": "Jetta",
+      "image": "https://i.imgur.com/v7bec6j.jpeg",
+      "price": 45000,
+      "year": 2017
+    },
+    {
+      "id": 3,
+      "brand": "BMW",
+      "model": "320i",
+      "image": "https://i.imgur.com/MWIkUMk.jpeg",
+      "price": 55000,
+      "year": 2022
+    },
+    {
+      "id": 4,
+      "brand": "Ford",
+      "model": "F150",
+      "image": "https://i.imgur.com/kgTh4Ep.jpeg",
+      "price": 40000,
+      "year": 2023
+    },
+    {
+      "id": 5,
+      "brand": "Jaguar",
+      "model": "F-Type",
+      "image": "https://i.imgur.com/dILt6E7.jpeg",
+      "price": 70000,
+      "year": 2023
+    },
+    {
+      "id": 6,
+      "brand": "Mercedes-Benz",
+      "model": "C180",
+      "image": "https://i.imgur.com/UaCPNaJ.jpeg",
+      "price": 70000,
+      "year": 2018
+    },
+    {
+      "id": 7,
+      "brand": "Land Rover",
+      "model": "Evoque",
+      "image": "https://i.imgur.com/IFczApC.jpeg",
+      "price": 50000,
+      "year": 2016
+    },
+    {
+      "id": 8,
+      "brand": "Nissan",
+      "model": "Versa",
+      "image": "https://i.imgur.com/Ci9c0t8.jpeg",
+      "price": 30000,
+      "year": 2020
+    },
+    {
+      "id": 9,
+      "brand": "Volvo",
+      "model": "XC60",
+      "image": "https://i.imgur.com/7a2AWdW.jpeg",
+      "price": 42000,
+      "year": 2020
+    },
+    {
+      "id": 10,
+      "brand": "Volvo",
+      "model": "XC90",
+      "image": "https://i.imgur.com/GSyBCfw.jpeg",
+      "price": 47000,
+      "year": 2021
+    },
+    {
+      "id": 11,
+      "brand": "Alfa Romeo",
+      "model": "Stelvio",
+      "image": "https://i.imgur.com/RThaOmL.jpeg",
+      "price": 45000,
+      "year": 2022
+    },
+    {
+      "id": 12,
+      "brand": "Alfa Romeo",
+      "model": "Giulia Quadrifoglio",
+      "image": "https://i.imgur.com/RkgULYQ.jpeg",
+      "price": 45000,
+      "year": 2023
+    },
+    {
+      "id": 13,
+      "brand": "BMW",
+      "model": "M3",
+      "image": "https://i.imgur.com/qqRaWHE.jpeg",
+      "price": 60000,
+      "year": 2023
+    },
+    {
+      "id": 14,
+      "brand": "BMW",
+      "model": "X6",
+      "image": "https://i.imgur.com/z5IsQza.jpeg",
+      "price": 60000,
+      "year": 2023
+    },
+    {
+      "id": 15,
+      "brand": "Nissan",
+      "model": "Kicks",
+      "image": "https://i.imgur.com/MdR4d2C.jpg",
+      "price": 30000,
+      "year": 2023
+    }
+  ],
+  "motorcycle-search": [
+    {
+      "id": 1,
+      "brand": "Kawasaki",
+      "model": "Ninja",
+      "image": "https://i.imgur.com/Tjznc8l.jpeg",
+      "price": 10000,
+      "year": 2020
+    },
+    {
+      "id": 2,
+      "brand": "Ducatti",
+      "model": "Panigale",
+      "image": "https://i.imgur.com/AB6QxD3.jpg",
+      "price": 30000,
+      "year": 2022
+    },
+    {
+      "id": 3,
+      "brand": "Honda",
+      "model": "PCX",
+      "image": "https://i.imgur.com/Uc0YpGr.jpeg",
+      "price": 12000,
+      "year": 2017
+    },
+    {
+      "id": 4,
+      "brand": "BMW",
+      "model": "G310",
+      "image": "https://i.imgur.com/nMmPwGB.jpeg",
+      "price": 20000,
+      "year": 2023
+    },
+    {
+      "id": 5,
+      "brand": "BMW",
+      "model": "S1000",
+      "image": "https://i.imgur.com/79RGn2M.jpg",
+      "price": 30000,
+      "year": 2023
+    },
+    {
+      "id": 6,
+      "brand": "Suzuki",
+      "model": "Hayabusa",
+      "image": "https://i.imgur.com/0hjLkie.jpeg",
+      "price": 14000,
+      "year": 2023
+    },
+    {
+      "id": 7,
+      "brand": "Yamaha",
+      "model": "MT-10",
+      "image": "https://i.imgur.com/Ch9lPSV.jpeg",
+      "price": 16000,
+      "year": 2018
+    },
+    {
+      "id": 8,
+      "brand": "Yamaha",
+      "model": "YZF-R1M",
+      "image": "https://i.imgur.com/2RZGKRc.jpeg",
+      "price": 30000,
+      "year": 2023
+    },
+    {
+      "id": 9,
+      "brand": "Yamaha",
+      "model": "Tracer 9 GT",
+      "image": "https://i.imgur.com/VWkD4GQ.jpeg",
+      "price": 14000,
+      "year": 2020
+    },
+    {
+      "id": 10,
+      "brand": "Kawasaki",
+      "model": "Z400",
+      "image": "https://i.imgur.com/F6efY5h.jpeg",
+      "price": 7000,
+      "year": 2023
+    },
+    {
+      "id": 11,
+      "brand": "Kawasaki",
+      "model": "Vulcan",
+      "image": "https://i.imgur.com/6TaGzub.jpeg",
+      "price": 9000,
+      "year": 2023
+    },
+    {
+      "id": 12,
+      "brand": "Kawasaki",
+      "model": "Versys 1000",
+      "image": "https://i.imgur.com/Xhjh5Mc.jpeg",
+      "price": 18000,
+      "year": 2023
+    },
+    {
+      "id": 13,
+      "brand": "Suzuki",
+      "model": "GSX-S1000 GT",
+      "images": "https://i.imgur.com/DXVr5NU.jpeg",
+      "price": 18000,
+      "year": 2023
+    },
+    {
+      "id": 14,
+      "brand": "Honda",
+      "model": "CB 1000R",
+      "image": "https://i.imgur.com/X2RUs5T.jpeg",
+      "price": 8000,
+      "year": 2023
+    },
+    {
+      "id": 15,
+      "brand": "Honda",
+      "model": "NC 750X",
+      "image": "https://i.imgur.com/IfQhsZc.jpeg",
+      "price": 8000,
+      "year": 2023
+    }
+  ],
+  "mazecar-brands": [
+    "Alfa Romeo",
+    "BMW",
+    "Ford",
+    "Jaguar",
+    "Mercedes-Benz",
+    "Nissan",
+    "Volvo",
+    "Land Rover",
+    "Volkswagen"
+  ],
+  "mazecar-years": [
+    "2023",
+    "2022",
+    "2021",
+    "2020",
+    "2018",
+    "2017",
+    "2016"
+  ],
+  "mazemotorcycle-brands": [
+    "Honda",
+    "BMW",
+    "Ducatti",
+    "Kawasaki",
+    "Suzuki",
+    "Yamaha"
+  ],
+  "mazemotorcycle-years": [
+    "2023",
+    "2022",
+    "2020",
+    "2018",
+    "2017"
+  ],
+  "user-messages": [
+    {
+      "email": "myemail@gmail.com",
+      "message": "",
+      "id": 1
+    },
+    {
+      "email": "myemail@gmail.com",
+      "message": "",
+      "id": 2
+    },
+    {
+      "email": "myemail@gmail.com",
+      "message": "",
+      "id": 3
+    },
+    {
+      "email": "myemail@gmail.com",
+      "message": "",
+      "id": 4
+    },
+    {
+      "email": "myemail@gmail.com",
+      "message": "",
+      "id": 5
+    },
+    {
+      "email": "myemail@gmail.com",
+      "message": "",
+      "id": 6
+    },
+    {
+      "email": "myemail@gmail.com",
+      "message": "",
+      "id": 7
+    },
+    {
+      "email": "myemail@gmail.com",
+      "message": "",
+      "id": 8
+    },
+    {
+      "email": "myemail@gmail.com",
+      "message": "",
+      "id": 9
+    },
+    {
+      "email": "myemail@gmail.com",
+      "message": "",
+      "id": 10
+    }
+  ]
 }

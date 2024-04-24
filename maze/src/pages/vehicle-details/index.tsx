@@ -7,13 +7,14 @@ import { BRAND_NAME } from '../../constants';
 import { useRequest } from '../../hooks';
 import { CarDetailsResponse, MotorcycleDetailsResponse } from '../../interfaces';
 import { getVehiclePriceFormatted } from '../../utils';
-import { CarInfo, MotorcycleInfo } from './components';
+import { BuyModal, CarInfo, MotorcycleInfo } from './components';
 import './style.scss'
 
 export function VehicleDetailsPage() {
     const [vehicle, setVehicle] = useState<CarDetailsResponse | MotorcycleDetailsResponse>();
     const [currentImage, setCurrentImage] = useState<number>(0);
     const [isDetailsLoading, setIsDetailsLoading] = useState<boolean>(false);
+    const [isBuyModalOpen, setIsBuyModalOpen] = useState<boolean>(false)
 
     const { getCarDetails, getMotorcycleDetails } = useRequest();
     const { id } = useParams()
@@ -63,7 +64,7 @@ export function VehicleDetailsPage() {
                     </ul>
 
                     <span className="vehicle-price">{getVehiclePriceFormatted(vehicle?.price || 0)}</span>
-                    <button className="buy-button">Buy Now</button>
+                    <button className="buy-button" onClick={() => setIsBuyModalOpen(true)}>Buy Now</button>
                 </div>
     }
 
@@ -71,6 +72,7 @@ export function VehicleDetailsPage() {
         <Header />
         
         <div className="vehicle-details-container">
+            {isBuyModalOpen && <BuyModal handleClickCloseModal={() => setIsBuyModalOpen(false)}/>}
             <div className="vehicle-image-container">
                 <button className="image-button previous" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex - 1)} disabled={isPreviousImageButtonDisabled || isDetailsLoading}>
                     <ArrowBack />
