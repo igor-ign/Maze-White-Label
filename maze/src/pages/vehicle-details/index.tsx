@@ -19,8 +19,8 @@ export function VehicleDetailsPage() {
     const { getCarDetails, getMotorcycleDetails } = useRequest();
     const { id } = useParams()
 
-    const isPreviousImageButtonDisabled = currentImage === 0
-    const isNextImageButtonDisabled = currentImage + 1 === vehicle?.images?.length
+    const isInitialImage = currentImage === 0
+    const isLastImage = currentImage + 1 === vehicle?.images?.length
 
     useEffect(() => {
         async function getVehicleDetails() {
@@ -40,7 +40,13 @@ export function VehicleDetailsPage() {
 
     function renderImageInfo() {
         if (!isDetailsLoading) {
-            return (<img src={vehicle?.images[currentImage]} alt={`${vehicle?.brand} ${vehicle?.model}`} className='vehicle-image'/>)
+            return (
+            <img 
+            src={vehicle?.images[currentImage]} 
+            alt={`${vehicle?.brand} ${vehicle?.model}`} 
+            className='vehicle-image'
+            />
+        )
         }
 
         return <SkeletonLoader width='500px' height='300px' borderRadius='0'/>
@@ -74,15 +80,27 @@ export function VehicleDetailsPage() {
         <div className="vehicle-details-container">
             {isBuyModalOpen && <BuyModal handleClickCloseModal={() => setIsBuyModalOpen(false)}/>}
             <div className="vehicle-image-container">
-                <button className="image-button previous" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex - 1)} disabled={isPreviousImageButtonDisabled || isDetailsLoading}>
-                    <ArrowBack />
-                </button>
+                {!isDetailsLoading &&
+                    <button 
+                    className="image-button previous" 
+                    onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex - 1)}
+                    disabled={isInitialImage} 
+                    >
+                        <ArrowBack />
+                    </button>
+                }
 
                 {renderImageInfo()}
 
-                <button className="image-button next" onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex + 1)} disabled={isNextImageButtonDisabled || isDetailsLoading}>
-                    <ArrowForward />
-                </button>
+                {!isDetailsLoading &&
+                    <button 
+                    className="image-button next" 
+                    onClick={() => setCurrentImage((prevImageIndex) => prevImageIndex + 1)} 
+                    disabled={isLastImage}
+                    >
+                        <ArrowForward />
+                    </button>
+                }
             </div>
 
             {renderVehicleInfo()}

@@ -65,6 +65,10 @@
                 > .scroll-link {
                     color: $secondary;
                     text-decoration: none;
+
+                    @include apply-styles-for-multiple-devices(mobile, tablet) {
+                        color: $black; 
+                    }
                 }
 
             }
