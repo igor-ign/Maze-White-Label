@@ -19,6 +19,7 @@ export function Header() {
     function handleClickHeaderItems() {
         const isUserInHomePage = location.pathname === appRoutePaths.HOME
 
+        if (isDeviceTabletOrMobile) setIsMenuOpen(false)
         if (!isUserInHomePage) navigate(appRoutePaths.HOME)
     }
 
@@ -43,11 +44,19 @@ export function Header() {
     }
 
     return <header className="header-container">
+        <div className="header-content">
             <img src={IMAGES.LOGO} alt={`${BRAND_DISPLAY_NAME} logo`} className="header-logo"/>
 
+            {isDeviceTabletOrMobile && 
+            <button 
+            className="hamburger-icon" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+                <MenuIcon fontSize="large"/>
+            </button>}
             <nav className="navigation-container">
-                {isDeviceTabletOrMobile && <button className="hamburger-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}><MenuIcon fontSize="large"/></button>}
                 {renderHeaderNavigationItems()}
             </nav>
+        </div>
     </header>
 }
