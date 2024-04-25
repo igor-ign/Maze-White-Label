@@ -65,7 +65,7 @@ export function BuyModal({ handleClickCloseModal }: { handleClickCloseModal: () 
                     </textarea>
                 </label>
                 <button className="submit-button">
-                    {isFormRequestLoading ? <CircularProgress size={20} style={{ color: 'white'}}/> : 'Send'}
+                    {isFormRequestLoading ? <CircularProgress size={20} style={{ color: 'white' }}/> : 'Send'}
                 </button>
             </form>
         </div>
