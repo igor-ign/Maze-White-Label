@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Toast } from '../../../../components'
 import { BRAND_NAME } from '../../../../constants'
 import { useRequest } from '../../../../hooks'
 import { SkeletonListUtilProps, VehicleListResponse } from '../../../../interfaces'
 import { getAppRoutePaths, getSkeletonLoaderList } from '../../../../utils'
 import { VehicleOverviewCard } from '../vehicle-overview-card'
 import './style.scss'
-import { Toast } from '../../../../components'
 
 export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
     const [isListInViewport, setIsListInViewport] = useState<boolean>()
