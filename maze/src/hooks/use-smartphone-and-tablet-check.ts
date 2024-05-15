@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function useMobileOrTabletCheck() {
+export function useSmartphoneAndTabletCheck() {
     const [width, setWidth] = useState(window.innerWidth);
 
     const tabletMaxWidth = 1100

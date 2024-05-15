@@ -17,7 +17,7 @@
             display: flex;
             justify-content: space-between;
 
-            @include apply-styles-for-multiple-devices(mobile, tablet) {
+            @include apply-styles-for-multiple-devices(smartphone, tablet) {
                 justify-content: center;
                 position: relative;
                 margin-bottom: 50px;
@@ -46,7 +46,7 @@
                 }
 
                 &.next {
-                    @include apply-styles-for-multiple-devices(mobile, tablet) {
+                    @include apply-styles-for-multiple-devices(smartphone, tablet) {
                         left: -65px;
                         position: relative;
                         top: 80px;
@@ -54,7 +54,7 @@
                 }
 
                 &.previous {
-                    @include apply-styles-for-multiple-devices(mobile, tablet) {
+                    @include apply-styles-for-multiple-devices(smartphone, tablet) {
                         position: relative;
                         right: -65px;
                         top: 80px;

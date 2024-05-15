@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
-import { Header } from "../../components";
+import { Header, Toast } from "../../components";
 import { BRAND_NAME } from "../../constants";
 import { useRequest } from "../../hooks";
 import { CarSearchFilters, MotorcycleSearchFilters, SkeletonListUtilProps, VehicleSearchResponse } from "../../interfaces";
@@ -14,6 +14,8 @@ export function Search() {
     const [isVehiclesLoading, setIsVehiclesLoading] = useState<boolean>(false)
     const [isFiltersOpen, setIsFiltersOpen] = useState<boolean>(false)
     const [filters, setFilters] = useState<CarSearchFilters | MotorcycleSearchFilters>(INITIAL_VEHICLE_SEARCH_FILTERS)
+    const [isToastOpen, setIsToastOpen] = useState<boolean>(false)
+
     const { getCarSearch, getMotorcycleSearch } = useRequest()
 
     const currentBrand = BRAND_NAME
@@ -34,6 +36,7 @@ export function Search() {
 
             } catch(error) {
                 console.error(error)
+                setIsToastOpen(true)
             } finally {
                 setIsVehiclesLoading(false)
             }
@@ -63,12 +66,18 @@ export function Search() {
         <Header />
 
         {isFiltersOpen && 
-        <FiltersModal 
-        setFilters={(filters) => 
-        setFilters(filters)} 
-        setIsModalOpen={(isOpen) => setIsFiltersOpen(isOpen)}
-        clearVehicles={() => setVehicles([])}
-        />}
+            <FiltersModal 
+            setFilters={(filters) => 
+            setFilters(filters)} 
+            setIsModalOpen={(isOpen) => setIsFiltersOpen(isOpen)}
+            clearVehicles={() => setVehicles([])}
+            />
+        }
+        <Toast
+        handleCloseToast={() => setIsToastOpen(false)} 
+        isToastOpen={isToastOpen} 
+        message='Error while trying to load vehicles.'
+        />
         <main className="vehicle-list-container">
             <button className="filters-button" onClick={() => setIsFiltersOpen(true)}>
                 <FilterAltIcon />

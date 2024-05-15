@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Toast } from '../../../../components'
 import { BRAND_NAME } from '../../../../constants'
 import { useRequest } from '../../../../hooks'
 import { SkeletonListUtilProps, VehicleListResponse } from '../../../../interfaces'
@@ -8,9 +9,10 @@ import { VehicleOverviewCard } from '../vehicle-overview-card'
 import './style.scss'
 
 export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
-    const [ isListInViewport, setIsListInViewport] = useState<boolean>()
-    const [ vehicleList, setVehicleList] = useState<VehicleListResponse[]>([])
-    const [ isOverviewLoading, setIsOverviewLoading] = useState<boolean>(true);
+    const [isListInViewport, setIsListInViewport] = useState<boolean>()
+    const [vehicleList, setVehicleList] = useState<VehicleListResponse[]>([])
+    const [isOverviewLoading, setIsOverviewLoading] = useState<boolean>(true)
+    const [isToastOpen, setIsToastOpen] = useState<boolean>(false)
 
     const { getCarOverview, getMotorcycleOverview } = useRequest()
     const navigate = useNavigate()
@@ -54,6 +56,7 @@ export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
                 setIsOverviewLoading(false)
             } catch (error) {
                 console.error(error)
+                setIsToastOpen(true)
             }
         }
 
@@ -78,6 +81,11 @@ export function VehicleOverview({ brandKeyword }: { brandKeyword: string}) {
     }
 
     return <section className="vehicle-overview-container">
+        <Toast 
+        handleCloseToast={() => setIsToastOpen(false)} 
+        isToastOpen={isToastOpen} 
+        message='Error while trying to load vehicles.'
+        />
         <div className="vehicle-overview-content" id='vehicles'>
             <h1 className="overview-title">Some of the available {brandKeyword}s</h1>
 
