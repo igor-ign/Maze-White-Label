@@ -1,0 +1,20 @@
+@import '../../styles/index.scss';
+
+.toast-container {
+    background-color: $error;
+    border-radius: 5px;
+    color: $secondary;
+    padding: 10px;
+    position: fixed;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 400px;
+    z-index: 4;
+
+    @include smartphone {
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}

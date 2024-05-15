@@ -3,7 +3,7 @@ import { useLocation, useNavigate} from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import { IMAGES } from "../../assets/images";
 import { BRAND_DISPLAY_NAME, BRAND_NAME } from "../../constants";
-import { useMobileOrTabletCheck } from "../../hooks";
+import { useSmartphoneAndTabletCheck } from "../../hooks";
 import { getAppRoutePaths } from "../../utils";
 import './style.scss'
 
@@ -12,7 +12,7 @@ export function Header() {
 
     const location = useLocation();
     const navigate = useNavigate()
-    const isDeviceTabletOrMobile = useMobileOrTabletCheck()
+    const isDeviceTabletOrMobile = useSmartphoneAndTabletCheck()
     
     const appRoutePaths = getAppRoutePaths()
 

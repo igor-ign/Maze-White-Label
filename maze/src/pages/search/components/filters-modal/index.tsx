@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
-import { MazeSelect } from '../../../../components';
+import { MazeSelect, Toast } from '../../../../components';
 import { BRAND_NAME } from '../../../../constants';
 import { useRequest } from '../../../../hooks';
 import { SelectData, VehicleBrandTypes } from '../../../../interfaces';
@@ -17,6 +17,7 @@ export function FiltersModal({ setFilters, setIsModalOpen, clearVehicles }: Filt
     const [maxPrice, setMaxPrice] = useState<string>('100000')
     const [selectedBrand, setSelectedBrand] = useState<VehicleBrandTypes>()
     const [selectedYear, setSelectedYear] = useState<string>('')
+    const [isToastOpen, setIsToastOpen] = useState<boolean>(false)
 
     const { 
         getMazeCarBrands, 
@@ -49,6 +50,7 @@ export function FiltersModal({ setFilters, setIsModalOpen, clearVehicles }: Filt
 
             } catch (error) {
                 console.error(error)
+                setIsToastOpen(true)
             } finally {
                 setIsFiltersLoading(false)
             }
@@ -88,6 +90,11 @@ export function FiltersModal({ setFilters, setIsModalOpen, clearVehicles }: Filt
     }
 
     return <div className="modal-container">
+        <Toast
+        handleCloseToast={() => setIsToastOpen(false)} 
+        isToastOpen={isToastOpen} 
+        message='Error while trying to load filters.'
+        />
         <div className="modal-content">
             <div className="modal-header">
                 <h1 className="modal-title">Filters</h1>

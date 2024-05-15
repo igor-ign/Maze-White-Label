@@ -4,7 +4,7 @@
     background-color: $primary;
     z-index: 5;
 
-    @include apply-styles-for-multiple-devices(mobile, tablet) {
+    @include apply-styles-for-multiple-devices(smartphone, tablet) {
         position: sticky;
         top: -2px;
     }
@@ -31,7 +31,7 @@
             max-width: 90%;
             width: 500px;
     
-            @include apply-styles-for-multiple-devices(mobile, tablet) {
+            @include apply-styles-for-multiple-devices(smartphone, tablet) {
                 align-items: center;
                 display: flex;
                 flex-direction: row-reverse;
@@ -44,7 +44,7 @@
                 gap: 40px;
                 list-style: none;
     
-                @include apply-styles-for-multiple-devices(mobile, tablet) {
+                @include apply-styles-for-multiple-devices(smartphone, tablet) {
                     align-items: center;
                     background-color: $secondary;
                     flex-direction: column;
@@ -54,7 +54,7 @@
                     padding: 40px;
                     position: fixed;
                     right: 0px;
-                    top: 100px;
+                    top: 90px;
                     width: 100%;
                     z-index: 3;
                 }
@@ -71,7 +71,7 @@
                         }
                     }
     
-                    @include apply-styles-for-multiple-devices(mobile, tablet) {
+                    @include apply-styles-for-multiple-devices(smartphone, tablet) {
                         color: $black; 
                     }
     
@@ -79,7 +79,7 @@
                         color: $secondary;
                         text-decoration: none;
     
-                        @include apply-styles-for-multiple-devices(mobile, tablet) {
+                        @include apply-styles-for-multiple-devices(smartphone, tablet) {
                             color: $black; 
                         }
                     }
